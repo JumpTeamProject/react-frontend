@@ -1,10 +1,57 @@
-<<<<<<< Updated upstream
 .App {
   text-align: center;
 }
 
 .nav {
-  background-color: darkgoldenrod;
+  background-color: #125061;
+}
+
+.title {
+  color: chartreuse;
+  font-family: 'Balsamiq Sans';
+  font-weight: bolder;
+  font-size: x-large;
+}
+
+.page {
+  width: 100%;
+  background-image: url('https://www.seriouseats.com/2019/07/20190619-korean-bbq-vicky-wasik-19-1500x1125.jpg');
+}
+
+.title:hover {
+  color: crimson;
+  font-family: 'Balsamiq Sans';
+  font-weight: bolder;
+  font-size: x-large;
+}
+
+.admin {
+  color: #125061 !important;
+  font-family: 'Balsamiq Sans' !important;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.user {
+  color: chartreuse !important;
+  font-family: 'Balsamiq Sans' !important;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+nav .navbar-nav li a{
+  color: rgb(250, 0, 50) !important;
+  font-family: 'Balsamiq Sans' !important;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+nav .navbar-nav li a:hover{
+  color: rgb(250, 0, 50) !important;
+  font-family: 'Balsamiq Sans' !important;
+  font-weight: bolder;
+  font-size: larger;
+  opacity: 0.7;
 }
 
 .App-logo {
@@ -54,13 +101,13 @@
   position: absolute;
   width: 20%;
   margin-top: 19%;
-  background: darkgoldenrod;
+  background: #125061;
   border-radius: 4.5rem;
-  padding: 5%;
+  padding: 3%;
 }
 .login-form-1{
   padding: 9%;
-  background: darkgoldenrod;
+  background: #125061;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
 }
 .login-form-1 h3{
@@ -70,7 +117,7 @@
 }
 .login-form-2{
   padding: 9%;
-  background: red;
+  background: chartreuse;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
 }
 .login-form-2 h3{
@@ -81,12 +128,24 @@
 .btnSubmit{
   font-weight: 600;
   width: 50%;
-  color: #282726;
-  background-color: #fff;
+  color: white;
+  background-color: crimson;
   border: none;
   border-radius: 1.5rem;
   padding:2%;
 }
+
+.btnSubmit:hover {
+  font-weight: 600;
+  width: 50%;
+  color: white;
+  background-color: crimson;
+  opacity: 0.6;
+  border: none;
+  border-radius: 1.5rem;
+  padding:2%;
+}
+
 .btnForgetPwd{
   color: #fff;
   font-weight: 600;
