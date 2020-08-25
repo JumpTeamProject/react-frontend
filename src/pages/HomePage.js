@@ -5,6 +5,9 @@ class HomePage extends Component {
         return (
             <div>
                <h1>Home</h1>
+               <div className="overflow">
+                    <img src="" alt="" />
+                </div>
             </div>
         );
     }
