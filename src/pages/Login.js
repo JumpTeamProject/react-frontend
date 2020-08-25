@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import '../Login.css';
 
 class Login extends Component {
     render() {
         return (
             <div className="container login-container fadeInDown">
-                    <div className="row">
+                <div className="row">
                     <div className="col-md-6 login-form-1">
                         <h3 className="user">User Login</h3>
                         <form>
