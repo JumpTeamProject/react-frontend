@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../Login.css';
 
-//Will be updated to use Hooks 
+//Will be updated to use Hooks
 class Login extends Component {
 
     constructor(props) {
