@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
+import Card from '../CardContent';
 
 class HomePage extends Component {
     render() {
         return (
-            <div className="card text-center">
-                <h1>Home</h1>
-                <div className="overflow">
-                    <img src="" alt="" />
-                </div>
+            <div>
+                <Card />
             </div>
         );
     }

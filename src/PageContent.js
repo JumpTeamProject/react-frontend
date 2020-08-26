@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import HomePage from './pages/HomePage';
 import Login from './pages/Login';
 
+
 class PageContent extends Component {
 
   changePage(page) {
