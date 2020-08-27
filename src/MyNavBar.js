@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './App.css';
+import logo from './images/cutout_logo.png';
 
 class MyNavBar extends Component {
 
@@ -18,8 +19,8 @@ class MyNavBar extends Component {
     return (
       <div>
       <nav className="navbar navbar-expand-lg nav fadeIn third">
-        <a href="#" className="navbar-brand title" onClick={(event) => this.handleNavClick(event, 'home')}>Chowzers</a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <a href="#"> <img src={logo} style={{width:80, marginTop: -7}} className="navbar-brand title" onClick={(event) => this.handleNavClick(event, 'home')} /></a>        
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
