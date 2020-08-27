@@ -2,19 +2,7 @@
     margin-top: 5%;
     margin-bottom: 5%;
   }
-  .login-logo{
-    position: relative;
-    margin-left: -41.5%;
-  }
-  .login-logo img{
-    right: 81%;
-    position: absolute;
-    width: 20%;
-    margin-top: 15%;
-    background: rgb(18, 80, 97, 0.92);
-    border-radius: 4.5rem;
-    padding: 3%;
-  }
+  
   .login-form-1{
     padding: 9%;
     background: rgb(18, 80, 97, 0.92);

@@ -76,9 +76,6 @@ class Login extends Component {
                         </form>
                     </div>
                     <div className="col-md-6 login-form-2">
-                        <div className="login-logo">
-                            <img src="https://st.depositphotos.com/1005920/2423/i/950/depositphotos_24232387-stock-photo-food-red-circle-web-glossy.jpg" alt=""/>
-                        </div>
                         <h3 className="admin">Admin Login</h3>
                         <form onSubmit={this.handleAdminSubmit.bind(this)}>
                             <div className="form-group">
