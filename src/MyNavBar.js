@@ -30,6 +30,9 @@ class MyNavBar extends Component {
             <li className="nav-item">
               <a href="#" className="nav-link" onClick={(event) => this.handleNavClick(event, 'login')}>Login</a>
             </li>
+            <li className="nav-item">
+                <a href="#" className="nav-link" onClick={(event) => this.handleNavClick(event, 'restaurant')}>Restaurant</a>
+              </li>
           </ul>
           <form className="form-inline my-2 my-lg-0">
             <input className="form-control mr-sm-2" type="text" placeholder="Search"/>

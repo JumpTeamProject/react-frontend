@@ -1,12 +1,20 @@
-body {
+/* body {
     background: radial-gradient(#e5e5e5, #ffff, #e5e5e5);
-}
+} */
 
 .card {
     width: 20rem;
 }
 
+.card-column {
+    width: 50rem;
+}
+
 .card:hover {
+    box-shadow: 5px 10px 20px 1px rgba(0,0,0,0.253) !important;
+}
+
+.card-column:hover {
     box-shadow: 5px 10px 20px 1px rgba(0,0,0,0.253) !important;
 }
 
@@ -14,12 +22,21 @@ body {
     padding: 3rem 0 !important;
 }
 
+.card-body-column {
+    padding: 3rem 0 !important;
+    background: white;
+}
+
 .card-text {
-    font-size: .9rem;
-    padding: 0.4rem 1.9rem;
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
 }
 
 .container-fluid .row {
+    padding-top: 6rem;
+}
+
+.container-fluid .column {
     padding-top: 6rem;
 }
 
@@ -30,12 +47,23 @@ body {
 .card-img-top {
     transform: scale(1);
     transition: transform 0.5s ease;
+    height: 12rem;
 }
 
 .card-img-top:hover {
     transform: scale(1.5);
 }
 
-img {
-    height: 12rem;
+.card-img-top-column {
+    transform: scale(1);
+    transition: transform 0.5s ease;
+    height: 40rem;
 }
+
+.card-img-top-column:hover {
+    transform: scale(1.5);
+}
+
+/* img {
+    height: 12rem;
+} */

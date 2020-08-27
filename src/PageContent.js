@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import HomePage from './pages/HomePage';
 import Login from './pages/Login';
+import Restaurant from './pages/RestaurantProfile';
 
 class PageContent extends Component {
 
@@ -10,6 +11,8 @@ class PageContent extends Component {
         return <HomePage/>;
       case 'login':
         return <Login/>;
+      case 'restaurant':
+        return <Restaurant />;
       default:
         return <HomePage/>;
     }
