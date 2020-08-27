@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import HomePage from './pages/HomePage';
 import Login from './pages/Login';
+import Restaurant from './pages/RestaurantProfile';
 import './App.css';
 
 class App extends Component {
@@ -20,6 +21,8 @@ class App extends Component {
         return <HomePage />;
       case 'login':
         return <Login />;
+      case 'restaurant':
+        return <Restaurant />;
       default:
         return <HomePage />;
     }
@@ -49,6 +52,9 @@ class App extends Component {
               </li>
               <li className="nav-item">
                 <a href="#" className="nav-link" onClick={(event) => this.handleNavClick(event, 'login')}>Login</a>
+              </li>
+              <li className="nav-item">
+                <a href="#" className="nav-link" onClick={(event) => this.handleNavClick(event, 'restaurant')}>Restaurant</a>
               </li>
             </ul>
             <form className="form-inline my-2 my-lg-0">
