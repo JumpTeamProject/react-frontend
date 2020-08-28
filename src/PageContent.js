@@ -3,6 +3,7 @@ import HomePage from './pages/HomePage';
 import Login from './pages/Login';
 import Restaurant from './pages/RestaurantProfile';
 
+
 class PageContent extends Component {
 
   changePage(page) {

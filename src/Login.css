@@ -28,7 +28,7 @@
     font-weight: 600;
     width: 50%;
     color: white;
-    background-color: rgb(255, 63, 5);
+    background-color: rgb(255, 63, 5, 0.6);
     border: none;
     border-radius: 1.5rem;
     padding:2%;
@@ -39,7 +39,6 @@
     width: 50%;
     color: white;
     background-color: rgb(255, 63, 5);
-    opacity: 0.6;
     border: none;
     border-radius: 1.5rem;
     padding:2%;
