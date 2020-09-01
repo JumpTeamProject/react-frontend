@@ -7,6 +7,11 @@
 }
 
 .btn-color {
+  background-color: rgb(255, 63, 5, 0.6);
+  color: white;
+}
+
+.btn-color:hover {
   background-color: rgb(255, 63, 5);
   color: white;
 }
@@ -86,17 +91,6 @@ nav .navbar-nav li a:hover{
   to {
     transform: rotate(360deg);
   }
-}
-
-
-.btnForgetPwd{
-  color: #fff;
-  font-weight: 600;
-  text-decoration: none;
-}
-.btnForgetPwd:hover{
-  text-decoration:none;
-  color:#fff;
 }
 
 .fadeInDown {
