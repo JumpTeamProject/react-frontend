@@ -4,8 +4,10 @@ import Card from './CardUI';
 import img1 from '../image/mcdonalds.jpg';
 import img2 from '../image/burgerking.jpg';
 import img3 from '../image/wendys.jpg';
+import img4 from '../image/tacobell.jpg';
 
 class HomePage extends Component {
+
     render() {
         return (
             <div className="container-fluid d-flex justify-content-center">
@@ -19,6 +21,9 @@ class HomePage extends Component {
                     <div className="col-md-4">
                         <Card imgsrc={img3} title="Wendys" />
                     </div>
+                    {/* <div className="col-md-4">
+                        <Card imgsrc={img4} title="Taco Bell" />
+                    </div> */}
                 </div>
             </div>
         );
