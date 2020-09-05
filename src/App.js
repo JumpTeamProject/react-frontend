@@ -8,6 +8,8 @@ import MyNavBar from "./MyNavBar.js"
 import PageContent from "./PageContent.js"
 import './App.css';
 
+import CardInterface from './components/CardInterface';
+
 // import FormModal from './pages/FormModal';
 
 // class App extends Component {
@@ -103,6 +105,7 @@ class App extends Component {
       <div className="App">
         <MyNavBar changePage={this.changePage} />
         <PageContent page={webpage} />
+        <CardInterface />
       </div>
     );
   }
