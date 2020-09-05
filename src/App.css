@@ -2,6 +2,58 @@
   text-align: center;
 }
 
+.nav {
+  background-color: #125061;
+}
+
+.title {
+  color: chartreuse;
+  font-family: 'Balsamiq Sans';
+  font-weight: bolder;
+  font-size: x-large;
+}
+
+.page {
+  width: 100%;
+  background-image: url('https://www.seriouseats.com/2019/07/20190619-korean-bbq-vicky-wasik-19-1500x1125.jpg');
+}
+
+.title:hover {
+  color: crimson;
+  font-family: 'Balsamiq Sans';
+  font-weight: bolder;
+  font-size: x-large;
+}
+
+.admin {
+  color: #125061 !important;
+  font-family: 'Balsamiq Sans' !important;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.user {
+  color: chartreuse !important;
+  font-family: 'Balsamiq Sans' !important;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+nav .navbar-nav li a{
+  color: rgb(250, 0, 50) !important;
+  font-family: 'Balsamiq Sans' !important;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+nav .navbar-nav li a:hover{
+  color: rgb(250, 0, 50) !important;
+  font-family: 'Balsamiq Sans' !important;
+  font-weight: bolder;
+  font-size: larger;
+  opacity: 0.7;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +87,150 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.login-container{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.login-logo{
+  position: relative;
+  margin-left: -41.5%;
+}
+.login-logo img{
+  position: absolute;
+  width: 20%;
+  margin-top: 19%;
+  background: #125061;
+  border-radius: 4.5rem;
+  padding: 3%;
+}
+.login-form-1{
+  padding: 9%;
+  background: #125061;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-1 h3{
+  text-align: center;
+  margin-bottom:12%;
+  color:#fff;
+}
+.login-form-2{
+  padding: 9%;
+  background: chartreuse;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-2 h3{
+  text-align: center;
+  margin-bottom:12%;
+  color: #fff;
+}
+.btnSubmit{
+  font-weight: 600;
+  width: 50%;
+  color: white;
+  background-color: crimson;
+  border: none;
+  border-radius: 1.5rem;
+  padding:2%;
+}
+
+.btnSubmit:hover {
+  font-weight: 600;
+  width: 50%;
+  color: white;
+  background-color: crimson;
+  opacity: 0.6;
+  border: none;
+  border-radius: 1.5rem;
+  padding:2%;
+}
+
+.btnForgetPwd{
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+.btnForgetPwd:hover{
+  text-decoration:none;
+  color:#fff;
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/* Simple CSS3 Fade-in Animation */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fadeIn {
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fadeIn.first {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.fadeIn.second {
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+.fadeIn.third {
+  -webkit-animation-delay: 0.8s;
+  -moz-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+.fadeIn.fourth {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
 }
