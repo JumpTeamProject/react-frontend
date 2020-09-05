@@ -3,6 +3,8 @@ import MyNavBar from "./MyNavBar.js"
 import PageContent from "./PageContent.js"
 import './App.css';
 
+import FormModal from './pages/FormModal';
+
 class App extends Component {
 
   constructor(props) {
