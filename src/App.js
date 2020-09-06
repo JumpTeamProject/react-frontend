@@ -105,7 +105,7 @@ class App extends Component {
       <div className="App">
         <MyNavBar changePage={this.changePage} />
         <PageContent page={webpage} />
-        <CardInterface />
+        {/* <CardInterface /> */}
       </div>
     );
   }
