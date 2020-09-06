@@ -9,6 +9,8 @@ import Card from './CardUI';
 import '../Card.css';
 import img1 from '../images/food.jpeg';
 
+import CardInterface from './CardInterface';
+
 // class HomePage extends Component {
 
 //     render() {
@@ -61,6 +63,8 @@ class HomePage extends Component {
                     <Card imgsrc={img1} title={'Chick-fil-A'} rating={'5 stars'} />
 
                 </div>
+
+                <CardInterface />
             </div>
         );
     }
