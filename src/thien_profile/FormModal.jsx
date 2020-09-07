@@ -14,7 +14,7 @@ const FormModal = (props) => {
 
   // Switch Allows Modal Reuse for Update and Create
   switch (type) {
-    case 'create':
+    case 'add review':
       buttonColor = 'primary';
       buttonText = type.toString().toUpperCase();
       crudFunction = (student) => { createStudent(student); }
@@ -41,9 +41,7 @@ const FormModal = (props) => {
         </Modal.Header>
         <Modal.Body><StudentForm student={student} handleCrud={crudFunction} /></Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-            </Button>
+          <Button variant="secondary" onClick={handleClose}>Close</Button>
         </Modal.Footer>
       </Modal>
     </>
