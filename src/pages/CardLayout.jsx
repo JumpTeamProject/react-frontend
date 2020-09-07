@@ -10,7 +10,7 @@ function CardLayout(props) {
       {loading && <p>loading...</p>}
       {data &&
         data.length > 1 &&
-        data.map(student => <Card key={student.id} info={student} handleDelete={props.handleDelete} handleUpdate={props.handleUpdate} />)}
+        data.map(student => <Card key={restaurant.id} info={restaurant} handleDelete={props.handleDelete} handleUpdate={props.handleUpdate} />)}
       {/* {data && data.length > 0 && <Card info = {data.id} /> } */}
     </div>
   );
