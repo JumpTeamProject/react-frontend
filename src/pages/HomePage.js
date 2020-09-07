@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Card from './CardUI';
+import Card from '../thien_profile/CardUI';
 
 // import img1 from '../image/mcdonalds.jpg';
 // import img2 from '../image/burgerking.jpg';
@@ -9,7 +9,7 @@ import Card from './CardUI';
 import '../caroline_home/Card.css';
 import img1 from '../images/food.jpeg';
 
-import CardInterface from './CardInterface';
+import CardInterface from '../pages/CardInterface';
 import FormModal from './FormModal';
 
 // class HomePage extends Component {

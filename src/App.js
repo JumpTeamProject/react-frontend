@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import HomePage from './thien_profile/HomePage';
+import HomePage from './pages/HomePage';
 import Login from './darreal_login/Login';
 import Restaurant from './thien_profile/RestaurantProfile';
 
