@@ -7,8 +7,8 @@ export const useFetch = (searchMethod, searchValue) => {
 
   if (searchValue !== undefined) param = searchValue;
 
-  const getAll = 'http://localhost:8080/api/students';
-  const getById = 'http://localhost:8080/api/students/' + param;
+  const getAll = 'http://localhost:8080/api/allUsers';
+  const getById = 'http://localhost:8080/api/users/' + param;
   let url = null;
 
   switch (searchMethod) {
@@ -41,17 +41,17 @@ export const useFetch = (searchMethod, searchValue) => {
   return { loading, data };
 };
 
-export function createStudent(student) {
-  return axios.post('http://localhost:8080/api/add/student', student);
+export function createStudent(user) {
+  return axios.post('http://localhost:8080/api/add/user', user);
 }
 
-export function updateStudent(student) {
+export function updateStudent() {
   console.log('in the upate service');
-  return axios.put('http://localhost:8080/api/update/student', student);
+  return axios.put('http://localhost:8080/api/update/user');
 }
 
-export function deleteStudent(studentId) {
-  return axios.delete('http://localhost:8080/api/delete/student/' + studentId);
+export function deleteStudent(userId) {
+  return axios.delete('http://localhost:8080/api/delete/user/' + userId);
 }
 
 
