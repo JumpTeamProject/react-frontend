@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import './App.css';
-import logo from './images/cutout_logo.png';
-
-import FormModal from './pages/FormModal';
+import '../App.css';
+import logo from '../images/cutout_logo.png';
 
 class MyNavBar extends Component {
 
@@ -37,8 +35,6 @@ class MyNavBar extends Component {
                 <a href="#" className="nav-link" onClick={(event) => this.handleNavClick(event, 'restaurant')}>Restaurant</a>
               </li>
             </ul>
-
-            <FormModal type='create' />
 
             <form className="form-inline my-2 my-lg-0">
               <input className="form-control mr-sm-2" type="text" placeholder="Search" />
