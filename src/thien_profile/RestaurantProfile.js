@@ -10,7 +10,7 @@ import RestaurantDescriptionAndLocation from "./RestaurantDescriptionAndLocation
 
 const Card = props => {
     return (
-        <div className="card-column text-center shadow" >
+        <div className="card-column text-center shadow" id={props.id}>
             {/*<div className="overflow" >*/}
             {/*    <img src={props.imgsrc} alt="image" className="card-img-top-column" />*/}
             {/*</div>*/}
@@ -22,7 +22,7 @@ const Card = props => {
             {/*    <h4>Location:</h4>*/}
             {/*    <p>1234 Mcdonalds Ave</p>*/}
             {/*</div>*/}
-            <RestaurantDescriptionAndLocation />
+            <RestaurantDescriptionAndLocation name={props.title} description={props.description}/>
         </div>
     );
 }
