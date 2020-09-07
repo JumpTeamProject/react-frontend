@@ -1,5 +1,5 @@
 import React from "react";
-import { deleteRestaurant } from '../service/CardService';
+import { deleteRestaurant } from '../../service/CardService';
 import CardLayout from './CardLayout';
 // import GetCard from "./GetCard";
 
@@ -7,7 +7,7 @@ import CardLayout from './CardLayout';
 function CardClick(props) {
 
   // Delete Restaurant Card
-  const handleDelete = (id) => {
+const handleDelete = (id) => {
     let ok = window.confirm('Are you sure you wish to delete this student?\nPress "Ok" to confirm');
     if (ok === true) {
       var removeCard = document.getElementById('card' + id);

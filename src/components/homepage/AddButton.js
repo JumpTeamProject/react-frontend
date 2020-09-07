@@ -7,8 +7,8 @@ class AddButton extends Component {
             <div>
             <br/>
             <br/>
-                <div class="button_cont" align="left">
-                    <a class="example_d" href="add-website-here" target="_blank" rel="nofollow noopener">
+                <div className="button_cont" align="left">
+                    <a className="example_d" href="add-website-here" target="_blank" rel="nofollow noopener">
                         Add Restaurant
                     </a>
                 </div>
