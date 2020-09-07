@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import HomePage from './pages/HomePage';
-import Login from './pages/Login';
+import HomePage from './HomePage';
+import Login from '../nav-login/Login';
 
 
 class PageContent extends Component {
