@@ -71,7 +71,7 @@ class Login extends Component {
                                 <input type="password" className="form-control" name="userPassword" placeholder="Password" value={this.state.userPassword} onChange={this.handleChange.bind(this)} />
                             </div>
                             <div className="form-group">
-                                <input type="submit" className="btnSubmit" value="Login" />
+                                <input type="submit" className="btnSubmit" value="Login"/>
                             </div>
                         </form>
                     </div>
@@ -85,7 +85,7 @@ class Login extends Component {
                                 <input type="password" className="form-control" name="adminPassword" placeholder="Password" value={this.state.adminPassword} onChange={this.handleChange.bind(this)} />
                             </div>
                             <div className="form-group">
-                                <input type="submit" className="btnSubmit" value="Login" />
+                                <input type="submit" className="btnSubmit" value="Login"/>
                             </div>
                         </form>
                     </div>
