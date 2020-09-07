@@ -1,86 +1,12 @@
 
 import React, { Component } from 'react';
 import HomePage from './pages/HomePage';
-import Login from './pages/Login';
-import Restaurant from './pages/RestaurantProfile';
+import Login from './darreal_login/Login';
+import Restaurant from './thien_profile/RestaurantProfile';
 
-import MyNavBar from "./MyNavBar.js"
-import PageContent from "./PageContent.js"
+import MyNavBar from "./caroline_home/MyNavBar"
+import PageContent from "./caroline_home/PageContent"
 import './App.css';
-
-import CardInterface from './components/CardInterface';
-
-// import FormModal from './pages/FormModal';
-
-// class App extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       page: 'home'
-//     }
-
-//     this.handleNavClick = this.handleNavClick.bind(this);
-//   }
-
-//   changePage(page) {
-//     switch (page) {
-//       case 'home':
-//         return <HomePage />;
-//       case 'login':
-//         return <Login />;
-//       case 'restaurant':
-//         return <Restaurant />;
-//       default:
-//         return <HomePage />;
-//     }
-//   }
-
-//   handleNavClick(event, newPage) {
-//     this.setState({
-//       page: newPage
-//     });
-
-//     // prevent reload of page caused by clicking links
-//     event.preventDefault();
-//   }
-
-//   render() {
-//     return (
-//       <div>
-//         <nav className="navbar navbar-expand-lg nav fadeIn third">
-//           <a href="#" className="navbar-brand title" onClick={(event) => this.handleNavClick(event, 'home')}>Chowzers</a>
-//           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-//             <span className="navbar-toggler-icon"></span>
-//           </button>
-//           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-//             <ul className="navbar-nav mr-auto">
-//               <li className="nav-item">
-//                 <a href="#" className="nav-link" onClick={(event) => this.handleNavClick(event, 'home')}>Home <span className="sr-only">(current)</span></a>
-//               </li>
-//               <li className="nav-item">
-//                 <a href="#" className="nav-link" onClick={(event) => this.handleNavClick(event, 'login')}>Login</a>
-//               </li>
-//               <li className="nav-item">
-//                 <a href="#" className="nav-link" onClick={(event) => this.handleNavClick(event, 'restaurant')}>Restaurant</a>
-//               </li>
-//             </ul>
-
-//             <FormModal type='create' />
-
-//             <form className="form-inline my-2 my-lg-0">
-//               <input className="form-control mr-sm-2" type="text" placeholder="Search" />
-//               <button className="btn btn-danger my-2 my-sm-0" type="submit">Search</button>
-//             </form>
-//           </div>
-//         </nav>
-
-//         {this.changePage(this.state.page)}
-
-//       </div>
-
-//     );
-//   }
-// }
 
 class App extends Component {
 
@@ -105,7 +31,6 @@ class App extends Component {
       <div className="App">
         <MyNavBar changePage={this.changePage} />
         <PageContent page={webpage} />
-        {/* <CardInterface /> */}
       </div>
     );
   }
