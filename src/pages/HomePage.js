@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Card from '../CardContent';
+import CardLayout from '../CardLayout';
 
 class HomePage extends Component {
     render() {
         return (
             <div>
-                <Card />
+                <CardLayout />
             </div>
         );
     }
