@@ -1,6 +1,6 @@
 import React from "react";
 import Card from './CardUI';
-import { useFetch } from './service/CardService';
+import { useFetch } from '../../service/CardService';
 
 function CardLayout(props) {
   const { loading, data } = useFetch('getAll', null);
@@ -11,7 +11,7 @@ function CardLayout(props) {
       {data &&
         data.length > 1 &&
         data.map(restaurant => 
-            <Card key={restaurant.id} info={restaurant} handleDelete={props.handleDelete} handleUpdate={props.handleUpdate} />    
+            <Card key={restaurant.id} info={restaurant} handleDelete={props.handleDelete} />    
          )}
       {/* {data && data.length > 0 && <Card info = {data.id} /> } */}
     </div>

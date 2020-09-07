@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { Button, Modal } from 'react-bootstrap';
-import StudentForm from './StudentForm';
+import StudentForm from './CardForm.jsx';
 import { createStudent } from '../service/StudentService';
 
 const FormModal = (props) => {

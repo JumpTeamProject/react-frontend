@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import MyNavBar from "./MyNavBar.js"
-import PageContent from "./PageContent.js"
+import MyNavBar from "./components/nav-login/MyNavBar.js"
+import PageContent from "./components/homepage/PageContent.js"
 import './App.css';
 
 class App extends Component {
