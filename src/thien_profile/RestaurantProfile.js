@@ -1,25 +1,24 @@
 import React, { Component } from 'react'
 import './card-style.css';
-import RestaurantImage from "../components/RestaurantImage";
-import RestaurantDescriptionAndLocation from "../components/RestaurantDescriptionAndLocation";
+
 import img1 from '../image/mcdonalds.jpg';
 
+import CardInterface from '../pages/CardInterface';
+import FormModal from './FormModal';
 
 const Card = props => {
     return (
-        <div className="card-column text-center shadow" id={props.id}>
-            {/*<div className="overflow" >*/}
-            {/*    <img src={props.imgsrc} alt="image" className="card-img-top-column" />*/}
-            {/*</div>*/}
-            <RestaurantImage imgsrc={props.imageURL}/>
-            {/*<div className="card-body-column text-dark">*/}
-            {/*    <h4 className="card-title">{props.title}</h4>*/}
-            {/*    <p className="card-text text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt lectus ut pellentesque dapibus. Nulla facilisis sit amet mi a hendrerit. Donec eget vehicula elit. Curabitur metus ligula, lacinia eget leo semper, blandit sagittis odio. Vivamus ullamcorper elit vulputate elit eleifend, congue convallis nisl aliquam. Pellentesque auctor turpis ut diam maximus elementum. Nam iaculis luctus porttitor. Mauris fringilla tellus tellus, ornare pulvinar lectus scelerisque non. Nunc vel mauris odio. Sed ullamcorper lacus dui, vel lobortis velit porttitor eget. Nulla at gravida ante, sit amet mattis metus. Pellentesque ultricies condimentum feugiat. Praesent gravida nunc ac nulla tincidunt, quis semper ipsum aliquet. Aliquam nec erat nibh.</p>*/}
-            {/*    <hr />*/}
-            {/*    <h4>Location:</h4>*/}
-            {/*    <p>1234 Mcdonalds Ave</p>*/}
-            {/*</div>*/}
-            <RestaurantDescriptionAndLocation title={props.name} description={props.description} addressID={props.addressId} phoneNumber={props.phoneNumber} owner={props.owner} menuLink={props.menuLink}/>
+        <div className="card-column text-center shadow" >
+            <div className="overflow" >
+                <img src={props.imgsrc} alt="image" className="card-img-top-column" />
+            </div>
+            <div className="card-body-column text-dark">
+                <h4 className="card-title">{props.title}</h4>
+                <p className="card-text text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt lectus ut pellentesque dapibus. Nulla facilisis sit amet mi a hendrerit. Donec eget vehicula elit. Curabitur metus ligula, lacinia eget leo semper, blandit sagittis odio. Vivamus ullamcorper elit vulputate elit eleifend, congue convallis nisl aliquam. Pellentesque auctor turpis ut diam maximus elementum. Nam iaculis luctus porttitor. Mauris fringilla tellus tellus, ornare pulvinar lectus scelerisque non. Nunc vel mauris odio. Sed ullamcorper lacus dui, vel lobortis velit porttitor eget. Nulla at gravida ante, sit amet mattis metus. Pellentesque ultricies condimentum feugiat. Praesent gravida nunc ac nulla tincidunt, quis semper ipsum aliquet. Aliquam nec erat nibh.</p>
+                <hr />
+                <h4>Location:</h4>
+                <p>1234 Mcdonalds Ave</p>
+            </div>
         </div>
     );
 }
@@ -77,8 +76,12 @@ class RestaurantProfile extends Component {
                         <textarea value={this.state.review} onChange={this.handleChange} name="review" rows="10" className='form-control' placeholder="your reviews" />
                         <input type="submit" value="Submit" />
                     </div>
+
                 </form>
 
+                <FormModal type='review' />
+
+                <CardInterface />
             </div>
         );
     }

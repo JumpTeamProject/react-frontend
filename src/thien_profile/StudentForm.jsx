@@ -10,8 +10,9 @@ class StudentForm extends Component {
             firstName: props.student.firstName,
             lastName: props.student.lastName,
             email: props.student.email,
-            imagePath: props.student.imagePath,
-            department: props.student.department
+            // imagePath: props.student.imagePath,
+            // department: props.student.department,
+            description: props.student.description
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -47,7 +48,7 @@ class StudentForm extends Component {
                             </div>
                         </div>
 
-                        <div className="form-group">
+                        {/* <div className="form-group">
                             <label >email:</label>
                             <input type="text" name="email" className="form-control" id="email" value={this.state.email} onChange={this.handleChange} required />
                         </div>
@@ -55,11 +56,16 @@ class StudentForm extends Component {
                         <div className="form-group">
                             <label >Department:</label>
                             <input type="text" name="department" className="form-control" id="department" value={this.state.department} onChange={this.handleChange} required />
-                        </div>
+                        </div> */}
 
                         <div className="form-group">
                             <label >Image URL:</label>
                             <input type="text" name="imagePath" className="form-control" id="imagePath" value={this.state.imagePath} onChange={this.handleChange} required />
+                        </div>
+
+                        <div className="form-group">
+                            <label >Description:</label>
+                            <textarea type="text" name="description" className="form-control" id="description" value={this.state.description} onChange={this.handleChange} required />
                         </div>
 
                         <input type="submit" value="Submit" className="btn btn-primary" />
