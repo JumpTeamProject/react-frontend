@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../Login.css';
+import './Login.css';
 
 //Will be updated to use Hooks
 class Login extends Component {
@@ -18,7 +18,7 @@ class Login extends Component {
         let name = event.target.name;
         let value = event.target.value;
 
-        this.setState({ [name]  : value });
+        this.setState({ [name]: value });
     }
 
     handleUserSubmit(event) {
@@ -65,13 +65,13 @@ class Login extends Component {
                         <h3 className="user">User Login</h3>
                         <form onSubmit={this.handleUserSubmit.bind(this)}>
                             <div className="form-group">
-                                <input type="text" className="form-control" name="userEmail" placeholder="Email" value={this.state.userEmail} onChange={this.handleChange.bind(this)}/>
+                                <input type="text" className="form-control" name="userEmail" placeholder="Email" value={this.state.userEmail} onChange={this.handleChange.bind(this)} />
                             </div>
                             <div className="form-group">
                                 <input type="password" className="form-control" name="userPassword" placeholder="Password" value={this.state.userPassword} onChange={this.handleChange.bind(this)} />
                             </div>
                             <div className="form-group">
-                                <input type="submit" className="btnSubmit" value="Login"/>
+                                <input type="submit" className="btnSubmit" value="Login" />
                             </div>
                         </form>
                     </div>
@@ -85,7 +85,7 @@ class Login extends Component {
                                 <input type="password" className="form-control" name="adminPassword" placeholder="Password" value={this.state.adminPassword} onChange={this.handleChange.bind(this)} />
                             </div>
                             <div className="form-group">
-                                <input type="submit" className="btnSubmit" value="Login"/>
+                                <input type="submit" className="btnSubmit" value="Login" />
                             </div>
                         </form>
                     </div>
