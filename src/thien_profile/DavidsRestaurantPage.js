@@ -3,9 +3,6 @@ import './card-style.css';
 
 import img1 from '../image/mcdonalds.jpg';
 
-import CardInterface from '../pages/CardInterface';
-import FormModal from './FormModal';
-
 const Card = props => {
     return (
         <div className="card-column text-center shadow" >
@@ -79,9 +76,6 @@ class RestaurantProfile extends Component {
 
                 </form>
 
-                <FormModal type='review' />
-
-                <CardInterface />
             </div>
         );
     }
