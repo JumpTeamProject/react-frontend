@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import CardLayout from './CardLayout';
-import AddButton from './AddButton';
+import FormModal from './FormModal';
 
 class HomePage extends Component {
     render() {
         return (
             <div>
-                <AddButton />
+                <FormModal type = "create" />
                 <CardLayout />
             </div>
         );
