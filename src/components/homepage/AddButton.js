@@ -5,12 +5,13 @@ class AddButton extends Component {
     render() {
         return (
             <div>
-            
-                {/* <div class="button_cont" align="center">
-                    <a class="example_d" href="add-website-here" target="_blank" rel="nofollow noopener">
+            <br/>
+            <br/>
+                <div className="button_cont" align="left">
+                    <button className="example_d" href="add-website-here" target="_blank" rel="nofollow noopener">
                         Add Restaurant
-                    </a>
-                </div> */}
+                    </button>
+                </div>
     {/* <button class="button is-outlined">Why Not Try Clicking Me?</button> */}
 
 {/* <div class="box-3">
