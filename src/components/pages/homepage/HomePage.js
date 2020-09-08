@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import CardLayout from './CardLayout';
-import FormModal from './FormModal';
+import CardLayout from './cards/CardLayout';
+import FormModal from './forms/FormModal';
 
 class HomePage extends Component {
     render() {

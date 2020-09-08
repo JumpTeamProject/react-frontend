@@ -1,6 +1,6 @@
 import React from "react";
 import Card from './Card';
-import { useFetch } from '../service/ReviewService';
+import { useFetch } from '../../../../service/ReviewService';
 
 function CardLayout(props) {
   const { loading, data } = useFetch('getById', 1);

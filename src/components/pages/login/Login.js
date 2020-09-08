@@ -1,6 +1,6 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import './Login.css';
-import { validateUser } from '../service/StudentService';
+import { validateUser } from '../../../service/UserService';
 
 const useStateWithLocalStorage = localStorageKey => {
     const [value, setValue] = React.useState(

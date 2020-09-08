@@ -1,11 +1,11 @@
 
 import React, { Component } from 'react';
-import HomePage from './pages/HomePage';
+/*import HomePage from './pages/HomePage';
 import Login from './darreal_login/Login';
-import RestaurantProfile from './thien_profile/RestaurantProfile';
+import RestaurantProfile from './thien_profile/RestaurantProfile';*/
 
-import MyNavBar from "./caroline_home/MyNavBar"
-import PageContent from "./caroline_home/PageContent"
+import MyNavBar from "./components/navbar/MyNavBar"
+import PageContent from "./components/pages/PageContent"
 import './App.css';
 
 //import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';

@@ -1,5 +1,5 @@
 import React from "react";
-import { deleteRestaurant } from '../../service/CardService';
+import { deleteRestaurant } from '../../../../service/RestaurantService';
 import CardLayout from './CardLayout';
 // import GetCard from "./GetCard";
 

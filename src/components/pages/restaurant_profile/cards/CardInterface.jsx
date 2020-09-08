@@ -1,5 +1,5 @@
 import React from "react";
-import { deleteReview, updateReview } from '../service/ReviewService';
+import { deleteReview, updateReview } from '../../../../service/ReviewService';
 import CardLayout from "./CardLayout";
 
 // Card Interface Contains All Card Rendering, Grouping, Functions, and Modals

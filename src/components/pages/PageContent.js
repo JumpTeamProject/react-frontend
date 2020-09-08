@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import HomePage from '../pages/HomePage';
-import Login from '../darreal_login/Login';
-import Restaurant from '../thien_profile/RestaurantProfile';
+import HomePage from './homepage/HomePage';
+import Login from './login/Login';
+import Restaurant from './restaurant_profile/RestaurantProfile';
 
 
 class PageContent extends Component {

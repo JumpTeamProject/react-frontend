@@ -1,8 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import CardForm from './CardForm.jsx';
-import { createRestaurant } from '../../service/CardService';
-import AddButton from './AddButton';
+import { createRestaurant } from '../../../../service/RestaurantService';
+import AddButton from '../buttons/AddButton';
 
 const FormModal = (props) => {
   const [show, setShow] = useState(false);

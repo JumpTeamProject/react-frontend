@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FormModal from './FormModal';
+import FormModal from '../forms/FormModal';
 import './Card.css';
 
 class Card extends Component {

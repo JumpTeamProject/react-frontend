@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 // custom hook for performing GET request
@@ -7,11 +7,14 @@ export const useFetch = (searchMethod, searchValue) => {
 
   if (searchValue !== undefined) param = searchValue;
 
-  const getById = 'http://localhost:8080/api/users/' + param;
+  const getAll = 'http://localhost:8080/api/restaurants';
+  const getById = 'http://localhost:8080/api/restaurant/' + param;
   let url = null;
 
   switch (searchMethod) {
     case 'getById': url = getById;
+      break;
+    case 'getAll': url = getAll;
       break;
     default: url = null;
   }
@@ -38,21 +41,17 @@ export const useFetch = (searchMethod, searchValue) => {
   return { loading, data };
 };
 
-export function createStudent(user) {
-  return axios.post('http://localhost:8080/api/add/user', user);
+export function createRestaurant(restaurant) {
+  return axios.post('http://localhost:8080/api/add/restaurant', restaurant);
 }
 
-export function validateUser(email, password) {
-  return axios.get('http://localhost:8080/api/users/login/username/' + email + '/password/' + password);
-}
+// export function updateStudent(student) {
+//   console.log('in the upate service');
+//   return axios.put('http://localhost:8080/api/update/student', student);
+// }
 
-export function updateStudent() {
-  console.log('in the upate service');
-  return axios.put('http://localhost:8080/api/update/user');
-}
-
-export function deleteStudent(userId) {
-  return axios.delete('http://localhost:8080/api/delete/user/' + userId);
+export function deleteRestaurant(restaurantId) {
+  return axios.delete('http://localhost:8080/api/delete/restaurant/' + restaurantId);
 }
 
 

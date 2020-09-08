@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import './card-style.css';
+import './cards/card-style.css';
 
-import img1 from '../image/mcdonalds.jpg';
+import img1 from '../../../image/mcdonalds.jpg';
 
-import FormModal from './FormModal';
-import RestaurantImage from "./RestaurantImage";
-import RestaurantDetails from "./RestaurantDetails";
+import FormModal from './forms/FormModal';
+import RestaurantImage from "./containers/RestaurantImage";
+import RestaurantDetails from "./containers/RestaurantDetails";
 
 const Card = props => {
     return (
