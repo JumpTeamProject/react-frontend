@@ -1,0 +1,39 @@
+/* body {
+    background: radial-gradient(#e5e5e5, #ffff, #e5e5e5);
+} */
+
+.container-fluid .row {
+    padding-top: 6rem;
+}
+
+.container-fluid .column {
+    padding-top: 1rem;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+/* img {
+    height: 12rem;
+} */
+
+.SplitPane {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+.SplitPane-left {
+    float: left;
+    order: 1;
+    align-self: flex-start;
+}
+
+.SplitPane-right {
+    float: left;
+    order: 2;
+    align-self: flex-start;
+}
