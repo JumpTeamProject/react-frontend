@@ -8,7 +8,7 @@ import MyNavBar from "./caroline_home/MyNavBar"
 import PageContent from "./caroline_home/PageContent"
 import './App.css';
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+//import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 class App extends Component {
 
@@ -30,7 +30,7 @@ class App extends Component {
   render() {
     const webpage = this.state.page;
     return (
-      <Router>
+      //<Router>
         <div className="App">
           <MyNavBar changePage={this.changePage} />
           <PageContent page={webpage} />
@@ -40,7 +40,7 @@ class App extends Component {
             <Route exact path='/profile' component={RestaurantProfile} />
           </Switch> */}
         </div>
-      </Router>
+      //</Router>
     );
   }
 }

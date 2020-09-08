@@ -12,7 +12,7 @@ import img1 from '../images/food.jpeg';
 import CardInterface from '../pages/CardInterface';
 import FormModal from './FormModal';
 
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 // class HomePage extends Component {
 
