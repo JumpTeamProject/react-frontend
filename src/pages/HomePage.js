@@ -12,6 +12,8 @@ import img1 from '../images/food.jpeg';
 import CardInterface from '../pages/CardInterface';
 import FormModal from './FormModal';
 
+import { Link } from 'react-router-dom';
+
 // class HomePage extends Component {
 
 //     render() {
@@ -40,15 +42,16 @@ class HomePage extends Component {
     render() {
         return (
             <div>
+
                 <FormModal type='create' />
-                {/* <div className="container-fluid d-flex justify-content-center"> */}
-
-                {/* <Card title="Title" imgsrc= {img1}/> */}
-                {/* <Card imgsrc={img1} title={'Café Intermezzo'} rating={'5 stars'} /> */}
-
-                {/* </div>
-
                 <div className="container-fluid d-flex justify-content-center">
+
+                    {/* <Card title="Title" imgsrc= {img1}/> */}
+                    <Card imgsrc={img1} title={'Café Intermezzo'} rating={'5 stars'} />
+
+                </div>
+
+                {/* <div className="container-fluid d-flex justify-content-center">
 
                     <Card imgsrc={img1} title={'La Madeleine'} rating={'5 stars'} />
 
@@ -67,6 +70,7 @@ class HomePage extends Component {
                 </div> */}
 
                 <CardInterface />
+
             </div>
         );
     }
