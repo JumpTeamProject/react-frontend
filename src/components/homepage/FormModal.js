@@ -32,8 +32,10 @@ const FormModal = (props) => {
 
   return (
     <>
-      {   <div className="button_cont" align="left">
-                    <button className="example_d" onClick={handleShow} >
+      { 
+      <div className="button_cont" align="center">
+        <br/>
+          <button className="example_d" onClick={handleShow} >
                         Add Restaurant
                     </button>
                 </div>
