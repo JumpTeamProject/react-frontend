@@ -17,7 +17,7 @@ const FormModal = (props) => {
   switch (type) {
     case 'create':
       buttonColor = 'primary';
-      buttonText = type.toString().toUpperCase();
+      buttonText = 'Add';
       crudFunction = (restaurant) => { createRestaurant(restaurant); }
       restaurant = {};
       break;
@@ -32,9 +32,15 @@ const FormModal = (props) => {
 
   return (
     <>
-      {<AddButton variant={buttonColor} onClick={handleShow}>
-        {buttonText}
-      </AddButton>}
+      {   <div className="button_cont" align="left">
+                    <button className="example_d" onClick={handleShow} >
+                        Add Restaurant
+                    </button>
+                </div>
+      }
+      {/* //   <AddButton variant={buttonColor} onClick={handleShow}>
+      //   {buttonText}
+      // </AddButton>} */}
 
       <Modal show={show} onHide={handleClose} size='lg'>
         <Modal.Header closeButton>
