@@ -18,7 +18,7 @@ class CardForm extends Component {
 
        };
         this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
 
     handleChange = (event) => {
@@ -27,7 +27,7 @@ class CardForm extends Component {
         this.setState({ [nam]: val });
     }
 
-    handleSubmit = (event) => {
+    handleClick = (event) => {
         console.log('submit');
         this.props.handleCrud(this.state);
     }
@@ -37,7 +37,7 @@ class CardForm extends Component {
         return (
             <div>
                 <div className="form-style">
-                    <form onSubmit={this.handleSubmit}>
+                    <form >
                         <div className='row d-inline-flex'>
                             <div className="form-group col">
                                 <label>Restaurant Name:</label>
@@ -60,7 +60,7 @@ class CardForm extends Component {
                             <input type="text" name="owner" className="form-control" id="owner" value={this.state.owner} onChange={this.handleChange} required />
                         </div>
 
-                        <input type="submit" value="Submit" className="btn btn-primary" />
+                        <input type="button" onClick={this.handleClick} value="Submit" className="btn btn-primary" />
                     </form>
 
                 </div>
