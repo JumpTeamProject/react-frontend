@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './form.css';
 
-class StudentForm extends Component {
+class ReviewForm extends Component {
 
     constructor(props) {
         super(props);
@@ -76,7 +76,7 @@ class StudentForm extends Component {
                             <input type="text" name="rating" className="form-control" id="rating" value={this.state.rating} onChange={this.handleChange} required />
                         </div>
 
-                        <div className="form-group">
+                        {/* <div className="form-group">
                             <label >Restaurant ID:</label>
                             <input type="text" name="restaurantId" className="form-control" id="restaurantId" value={this.state.restaurantId} onChange={this.handleChange} required />
                         </div>
@@ -84,7 +84,7 @@ class StudentForm extends Component {
                         <div className="form-group">
                             <label >User ID:</label>
                             <input type="text" name="userId" className="form-control" id="userId" value={this.state.userId} onChange={this.handleChange} required />
-                        </div>
+                        </div> */}
 
                         <input type="submit" value="Submit" className="btn btn-primary" />
                     </form>
@@ -94,4 +94,4 @@ class StudentForm extends Component {
         );
     }
 }
-export default StudentForm;
+export default ReviewForm;

@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { Button, Modal } from 'react-bootstrap';
-import StudentForm from './StudentForm';
-import { createStudent } from '../service/ReviewService';
+import ReviewForm from './ReviewForm';
+import { createReview } from '../service/ReviewService';
 
 const FormModal = (props) => {
   const [show, setShow] = useState(false);
@@ -17,7 +17,7 @@ const FormModal = (props) => {
     case 'review':
       buttonColor = 'primary';
       buttonText = type.toString().toUpperCase();
-      crudFunction = (review) => { createStudent(review); }
+      crudFunction = (review) => { createReview(review); }
       review = {};
       break;
     case 'update':
@@ -37,9 +37,9 @@ const FormModal = (props) => {
 
       <Modal show={show} onHide={handleClose} size='lg'>
         <Modal.Header closeButton>
-          <Modal.Title>{buttonText + ' ' + 'Student'}</Modal.Title>
+          <Modal.Title>{buttonText + ' ' + 'Restaurant'}</Modal.Title>
         </Modal.Header>
-        <Modal.Body><StudentForm review={review} handleCrud={crudFunction} /></Modal.Body>
+        <Modal.Body><ReviewForm review={review} handleCrud={crudFunction} /></Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>Close</Button>
         </Modal.Footer>

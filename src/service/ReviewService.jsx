@@ -41,18 +41,18 @@ export const useFetch = (searchMethod, searchValue) => {
     return { loading, data };
 };
 
-export function createStudent(review) {
+export function createReview(review) {
     return axios.post('http://localhost:8080/api/add/review', review);
 }
 
-// export function updateStudent(review) {
-//     console.log('in the upate service');
-//     return axios.put('http://localhost:8080/api/update/review', review);
-// }
+export function updateReview(review) {
+    console.log('in the upate service');
+    return axios.put('http://localhost:8080/api/update/review', review);
+}
 
-// export function deleteStudent(reviewId) {
-//     return axios.delete('http://localhost:8080/api/delete/review/' + reviewId);
-// }
+export function deleteReview(reviewId) {
+    return axios.delete('http://localhost:8080/api/delete/review/' + reviewId);
+}
 
 
 
