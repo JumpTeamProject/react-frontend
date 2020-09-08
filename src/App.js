@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import MyNavBar from "./MyNavBar.js"
-import PageContent from "./PageContent.js"
+import MyNavBar from "./caroline_home/MyNavBar"
+import PageContent from "./caroline_home/PageContent"
 import './App.css';
-
-import FormModal from './pages/FormModal';
 
 class App extends Component {
 
