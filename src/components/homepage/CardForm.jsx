@@ -60,7 +60,8 @@ class CardForm extends Component {
                             <input type="text" name="owner" className="form-control" id="owner" value={this.state.owner} onChange={this.handleChange} required />
                         </div>
 
-                        <input type="button" onClick={this.handleClick} value="Submit" className="btn btn-primary" />
+                        <input type="button" value="Submit" onClick={this.handleClick} className="btn btn-primary" />
+
                     </form>
 
                 </div>

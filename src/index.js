@@ -11,4 +11,8 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+// var cors = require('cors')
+
+// app.use(cors())
+
 serviceWorker.unregister();
