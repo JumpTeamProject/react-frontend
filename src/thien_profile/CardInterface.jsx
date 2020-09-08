@@ -1,5 +1,5 @@
 import React from "react";
-import { deleteStudent, updateStudent } from '../service/ReviewService';
+import { deleteReview, updateReview } from '../service/ReviewService';
 import CardLayout from "./CardLayout";
 
 // Card Interface Contains All Card Rendering, Grouping, Functions, and Modals
@@ -11,14 +11,14 @@ function CardInterface(props) {
     if (ok === true) {
       var removeCard = document.getElementById('card' + id);
       removeCard.parentNode.removeChild(removeCard);
-      deleteStudent(id);
+      deleteReview(id);
       window.alert('Student has been deleted');
     }
   }
 
   // Update Student Card
   const handleUpdate = (review) => {
-    updateStudent(review);
+    updateReview(review);
   }
 
   // Render the Cards and the Modals
