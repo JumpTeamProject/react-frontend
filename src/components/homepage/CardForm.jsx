@@ -37,7 +37,7 @@ class CardForm extends Component {
         return (
             <div>
                 <div className="form-style">
-                    <form>
+                    <form >
                         <div className='row d-inline-flex'>
                             <div className="form-group col">
                                 <label>Restaurant Name:</label>
@@ -61,6 +61,7 @@ class CardForm extends Component {
                         </div>
 
                         <input type="button" value="Submit" onClick={this.handleClick} className="btn btn-primary" />
+
                     </form>
 
                 </div>
