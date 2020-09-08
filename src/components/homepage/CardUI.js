@@ -29,9 +29,9 @@ class Card extends Component {
                     <p className="card-text text-secondary">{this.props.info.description}</p>
                 </div>
                 {/* Button for ADMIN ONLY: */}
-                {/* <div className="col-lg-2"> */}
-                    {/* <DeleteButton restaurantID = {this.props.info.id} handleDelete={this.props.handleDelete } /> */}
-                {/* </div> */}
+                <div className="col-lg-2"> 
+                    <DeleteButton restaurantID = {this.props.info.id} handleDelete={this.props.handleDelete } />
+                </div>
             </div>
             </div>
         </div>
@@ -39,11 +39,11 @@ class Card extends Component {
     }
 }
 
-    // function DeleteButton(props) {
-    //     return(
-    //         <div className="col-lg-2">
-    //             <button className="btn btn-outline-success" onClick={props.handleDelete.bind(this, props.restaurantID)}>delete</button>
-    //         </div>
-    //     );
-    // }
+    function DeleteButton(props) {
+        return(
+            <div className="col-lg-2">
+                <button className="btn btn-outline-success" onClick={props.handleDelete.bind(this, props.restaurantID)}>delete</button>
+            </div>
+        );
+    }
 export default Card;
