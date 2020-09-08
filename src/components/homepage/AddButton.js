@@ -8,9 +8,9 @@ class AddButton extends Component {
             <br/>
             <br/>
                 <div className="button_cont" align="left">
-                    <a className="example_d" href="add-website-here" target="_blank" rel="nofollow noopener">
+                    <button className="example_d" href="add-website-here" target="_blank" rel="nofollow noopener">
                         Add Restaurant
-                    </a>
+                    </button>
                 </div>
     {/* <button class="button is-outlined">Why Not Try Clicking Me?</button> */}
 

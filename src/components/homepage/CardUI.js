@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import FormModal from './FormModal';
 import './Card.css';
-// import CardClick from './CardClick'
+import CardClick from './CardClick'
 
 // function handleClick() {
 //     console.log("I was clicked")
@@ -30,7 +30,7 @@ class Card extends Component {
                 </div>
                 {/* Button for ADMIN ONLY: */}
                 {/* <div className="col-lg-2"> */}
-                    <DeleteButton restaurantID = {this.props.info.id} handleDelete={this.props.handleDelete } />
+                    {/* <DeleteButton restaurantID = {this.props.info.id} handleDelete={this.props.handleDelete } /> */}
                 {/* </div> */}
             </div>
             </div>
@@ -39,11 +39,11 @@ class Card extends Component {
     }
 }
 
-    function DeleteButton(props) {
-        return(
-            <div className="col-lg-2">
-                <button className="btn btn-outline-success" onClick={this.props.handleDelete.bind(this, props.restaurantID)}>delete</button>
-            </div>
-        );
-    }
+    // function DeleteButton(props) {
+    //     return(
+    //         <div className="col-lg-2">
+    //             <button className="btn btn-outline-success" onClick={props.handleDelete.bind(this, props.restaurantID)}>delete</button>
+    //         </div>
+    //     );
+    // }
 export default Card;
