@@ -37,7 +37,7 @@ class CardForm extends Component {
         return (
             <div>
                 <div className="form-style">
-                    <form onSubmit={this.handleSubmit}>
+                    <form onClick={this.handleSubmit}>
                         <div className='row d-inline-flex'>
                             <div className="form-group col">
                                 <label>Restaurant Name:</label>
@@ -60,7 +60,7 @@ class CardForm extends Component {
                             <input type="text" name="owner" className="form-control" id="owner" value={this.state.owner} onChange={this.handleChange} required />
                         </div>
 
-                        <input type="submit" value="Submit" className="btn btn-primary" />
+                        <input type="submit" value="Submit" onClick={this.handleSubmit} className="btn btn-primary" />
                     </form>
 
                 </div>
