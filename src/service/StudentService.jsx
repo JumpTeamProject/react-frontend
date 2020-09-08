@@ -45,6 +45,10 @@ export function createStudent(user) {
   return axios.post('http://localhost:8080/api/add/user', user);
 }
 
+export function validateUser(email, password) {
+  return axios.get('http://localhost:8080/api/users/login/username/' + email + '/password/' + password);
+}
+
 export function updateStudent() {
   console.log('in the upate service');
   return axios.put('http://localhost:8080/api/update/user');
