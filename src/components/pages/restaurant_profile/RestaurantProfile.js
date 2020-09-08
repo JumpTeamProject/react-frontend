@@ -11,14 +11,14 @@ import CardInterface from "./cards/CardInterface";
 function ReviewList(props) {
     return (
         <div className="column">
-            <div className="col-md-4">
+            <div className="col-lg-12">
                 <SplitPane left={props.name} right={props.rating} />
             <div className="card-body-column text-dark">
                 <h4>Description:</h4>
                 <p>{props.description}</p>
             </div>
         </div>
-        <div className="col-md-4">
+        <div className="col-lg-12">
                 <FormModal type='review' />
                 <CardInterface />
             </div>
@@ -79,9 +79,9 @@ class RestaurantProfile extends Component {
         const review = {
             id: 1
         };
-        const name = <div className="card-body-column text-dark"><h4>Name:</h4><p>Bob</p></div>;
-        const rating = <div className="card-body-column text-dark"><h4>Rating:</h4><p>4.5</p></div>;
-        const left = <div className="column"><div className="col-md-4"><RestaurantImage imageURL={this.props.imageURL} /></div><div className="col-md-4"><RestaurantDetails owner={this.props.owner} phoneNumber={this.props.phoneNumber} location={this.props.addressId} /></div></div>;
+        const name = <div className="card-body-column text-dark" id="restname"><h4>Name:</h4><p>Bob</p></div>;
+        const rating = <div className="card-body-column text-dark" id="restrating"><h4>Rating:</h4><p>4.5</p></div>;
+        const left = <div className="column"><div className="col-lg-8"><RestaurantImage imageURL={this.props.imageURL} /></div><div className="col-lg-8"><RestaurantDetails owner={this.props.owner} phoneNumber={this.props.phoneNumber} location={this.props.addressId} /></div></div>;
         const right = <ReviewList description={"bob"} review={review} value={this.state.review} handleChange={this.handleChange} name={name} rating={rating} />;
 
         return (

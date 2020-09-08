@@ -2,6 +2,20 @@
     background: radial-gradient(#e5e5e5, #ffff, #e5e5e5);
 } */
 
+.card-body-column {
+    text-align: left;
+}
+
+#restname {
+    align-self: flex-start;
+    margin-left: -6rem;
+}
+
+#restrating {
+    align-self: flex-end;
+    margin-right: 0;
+}
+
 .container-fluid .row {
     padding-top: 6rem;
 }
@@ -11,7 +25,7 @@
 }
 
 .overflow {
-    overflow: hidden;
+    overflow: visible;
 }
 
 /* img {
@@ -22,18 +36,22 @@
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: space-evenly;
-    align-items: stretch;
+    justify-content: left;
+    align-items: flex-start;
 }
 
 .SplitPane-left {
     float: left;
     order: 1;
     align-self: flex-start;
+    margin-left: 6rem;
+    width: 20%;
 }
 
 .SplitPane-right {
     float: left;
     order: 2;
-    align-self: flex-start;
+    align-self: flex-end;
+    padding-left: 6rem;
+    width: 80%;
 }

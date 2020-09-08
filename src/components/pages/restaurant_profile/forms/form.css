@@ -3,3 +3,8 @@
     margin: 30px auto;
     color: red;
 }
+
+#review {
+    position: center;
+    cursor: pointer;
+}
