@@ -35,8 +35,6 @@ function Body(props) {
                 {/* <p>Department: {props.dept}</p> */}
                 <p>Description: {props.desc}</p>
                 <p>Rating: {props.rating}</p>
-                <p>Restaurant ID: {props.restId}</p>
-                <p>User ID: {props.userId}</p>
             </div>
         </div>
     );
