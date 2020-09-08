@@ -6,7 +6,7 @@ function CardLayout(props) {
   const { loading, data } = useFetch('getById', 1);
 
   return (
-    <div>
+      <div className="container-fluid ">
       {loading && <p>loading...</p>}
       {data &&
         data.length >= 1 &&

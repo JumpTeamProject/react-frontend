@@ -23,7 +23,7 @@ function CardInterface(props) {
 
   // Render the Cards and the Modals
   return (
-    <div>
+      <div className="container-fluid d-flex justify-content-center">
       <CardLayout handleUpdate={handleUpdate} handleDelete={handleDelete} />
     </div>
   );

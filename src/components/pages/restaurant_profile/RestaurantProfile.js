@@ -1,51 +1,26 @@
 import React, { Component } from 'react'
-import './cards/card-style.css';
+import './containers/container-style.css';
 
 import img1 from '../../../image/mcdonalds.jpg';
 
 import FormModal from './forms/FormModal';
 import RestaurantImage from "./containers/RestaurantImage";
 import RestaurantDetails from "./containers/RestaurantDetails";
-
-const Card = props => {
-    return (
-        <div className="card-column text-center shadow" id={'card' + props.review.id}>
-            {/*<div className="overflow" >*/}
-            {/*    <img src={props.imgsrc} alt="image" className="card-img-top-column" />*/}
-            {/*</div>*/}
-            {/*<RestaurantImage src={props.imageURL}/>*/}
-            {/*<div className="card-body-column text-dark">*/}
-            {/*    <h4 className="card-title">{props.title}</h4>*/}
-            {/*    <p className="card-text text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt lectus ut pellentesque dapibus. Nulla facilisis sit amet mi a hendrerit. Donec eget vehicula elit. Curabitur metus ligula, lacinia eget leo semper, blandit sagittis odio. Vivamus ullamcorper elit vulputate elit eleifend, congue convallis nisl aliquam. Pellentesque auctor turpis ut diam maximus elementum. Nam iaculis luctus porttitor. Mauris fringilla tellus tellus, ornare pulvinar lectus scelerisque non. Nunc vel mauris odio. Sed ullamcorper lacus dui, vel lobortis velit porttitor eget. Nulla at gravida ante, sit amet mattis metus. Pellentesque ultricies condimentum feugiat. Praesent gravida nunc ac nulla tincidunt, quis semper ipsum aliquet. Aliquam nec erat nibh.</p>*/}
-            {/*    <hr />*/}
-            {/*    <h4>Location:</h4>*/}
-            {/*    <p>1234 Mcdonalds Ave</p>*/}
-            {/*</div>*/}
-            {/*<RestaurantDescriptionAndLocation name={props.title} description={props.description}/>*/}
-            <form>
-                <div className="form-group form-style">
-                    <label htmlFor="review">Your reviews here</label>
-                    <textarea value={props.value} onChange={props.handleChange} name="review" rows="10" className='form-control' placeholder="your reviews" />
-                    <input type="submit" value="Submit" />
-                </div>
-
-            </form>
-        </div>
-    );
-}
+import CardInterface from "./cards/CardInterface";
 
 function ReviewList(props) {
     return (
         <div className="column">
-        <div className="col-md-4">
+            <div className="col-lg-12">
+                <SplitPane left={props.name} right={props.rating} />
             <div className="card-body-column text-dark">
                 <h4>Description:</h4>
                 <p>{props.description}</p>
             </div>
         </div>
-        <div className="col-md-4">
+        <div className="col-lg-12">
                 <FormModal type='review' />
-                <Card review={props.review} value={props.review} handleChange={props.handleChange} />
+                <CardInterface />
             </div>
         </div>
     );
@@ -104,8 +79,10 @@ class RestaurantProfile extends Component {
         const review = {
             id: 1
         };
-        const left = <div className="column"><div className="col-md-4"><RestaurantImage imageURL={this.props.imageURL} /></div><div className="col-md-4"><RestaurantDetails owner={this.props.owner} phoneNumber={this.props.phoneNumber} location={this.props.addressId} /></div></div>;
-        const right = <ReviewList description={"bob"} review={review} value={this.state.review} handleChange={this.handleChange} />;
+        const name = <div className="card-body-column text-dark" id="restname"><h4>Name:</h4><p>Bob</p></div>;
+        const rating = <div className="card-body-column text-dark" id="restrating"><h4>Rating:</h4><p>4.5</p></div>;
+        const left = <div className="column"><div className="col-lg-8"><RestaurantImage imageURL={this.props.imageURL} /></div><div className="col-lg-8"><RestaurantDetails owner={this.props.owner} phoneNumber={this.props.phoneNumber} location={this.props.addressId} /></div></div>;
+        const right = <ReviewList description={"bob"} review={review} value={this.state.review} handleChange={this.handleChange} name={name} rating={rating} />;
 
         return (
             <div>

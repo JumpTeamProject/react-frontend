@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { Button, Modal } from 'react-bootstrap';
+import './form.css';
 import ReviewForm from './ReviewForm';
 import { createReview } from '../../../../service/ReviewService';
 
@@ -30,8 +31,8 @@ const FormModal = (props) => {
   }
 
   return (
-    <>
-      {<Button variant={buttonColor} onClick={handleShow}>
+      <>
+          {<Button id={buttonText.toLowerCase()} variant={buttonColor} onClick={handleShow}>
         {buttonText}
       </Button>}
 
