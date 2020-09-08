@@ -8,12 +8,18 @@ import SearchForm from "./SearchForm";
 class MyNavBar extends Component {
 
   constructor(props) {
-    super(props);
+      super(props);
+      this.state = { showSearch: true };
     this.handleNavClick = this.handleNavClick.bind(this);
   }
 
-  handleNavClick(event, newPage) {
-    this.props.changePage(newPage);
+    handleNavClick(event, newPage) {
+        this.props.changePage(newPage);
+        if (newPage === 'home') {
+            this.setState({ showSearch: true });
+        } else {
+            this.setState({ showSearch: false });
+        }
     // prevent reload of page caused by clicking links
     event.preventDefault();
   }
@@ -49,7 +55,7 @@ class MyNavBar extends Component {
               </li> */}
             </ul>
 
-            <SearchForm/>
+                    {this.state.showSearch && < SearchForm />}
           </div>
         </nav>
       </div>
