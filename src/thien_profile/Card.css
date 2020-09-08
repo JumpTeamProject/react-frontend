@@ -1,6 +1,14 @@
-body {
-    background: radial-gradient(#e5e5e5, #ffff, #e5e5e5);
+/* img {
+    width: 100%;
 }
+
+.card {
+    width: 50%;
+} */
+
+/* body {
+    background: radial-gradient(#e5e5e5, #ffff, #e5e5e5);
+} */
 
 .card {
     /* width: 20rem; */
@@ -38,3 +46,6 @@ body {
     transform: scale(1.8);
 }
 
+.card-footer {
+    
+}

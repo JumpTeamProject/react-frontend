@@ -1,6 +1,11 @@
+
 import React, { Component } from 'react';
-import MyNavBar from "./MyNavBar.js"
-import PageContent from "./PageContent.js"
+import HomePage from './pages/HomePage';
+import Login from './darreal_login/Login';
+import Restaurant from './thien_profile/RestaurantProfile';
+
+import MyNavBar from "./caroline_home/MyNavBar"
+import PageContent from "./caroline_home/PageContent"
 import './App.css';
 
 class App extends Component {
@@ -19,16 +24,16 @@ class App extends Component {
       page: newPage
     });
   }
-  
-render() {
-  const webpage = this.state.page;
-  return (
-    <div className="App">
-      <MyNavBar changePage = {this.changePage}/>
-      <PageContent page = {webpage}/>
-    </div>
-  );
-}
+
+  render() {
+    const webpage = this.state.page;
+    return (
+      <div className="App">
+        <MyNavBar changePage={this.changePage} />
+        <PageContent page={webpage} />
+      </div>
+    );
+  }
 }
 
 export default App;
