@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { Button, Modal } from 'react-bootstrap';
-import StudentForm from './StudentForm';
-import { createStudent } from '../service/StudentService';
+import ReviewForm from './ReviewForm';
+import { createReview } from '../service/ReviewService';
 
 const FormModal = (props) => {
   const [show, setShow] = useState(false);
@@ -10,21 +10,21 @@ const FormModal = (props) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  var student, buttonColor, buttonText, crudFunction;
+  var review, buttonColor, buttonText, crudFunction;
 
   // Switch Allows Modal Reuse for Update and Create
   switch (type) {
     case 'review':
       buttonColor = 'primary';
       buttonText = type.toString().toUpperCase();
-      crudFunction = (student) => { createStudent(student); }
-      student = {};
+      crudFunction = (review) => { createReview(review); }
+      review = {};
       break;
     case 'update':
       buttonColor = 'warning';
       buttonText = type.toString().toUpperCase();
       crudFunction = props.handleUpdate;
-      student = props.student;
+      review = props.review;
       break;
     default:
   }
@@ -37,9 +37,9 @@ const FormModal = (props) => {
 
       <Modal show={show} onHide={handleClose} size='lg'>
         <Modal.Header closeButton>
-          <Modal.Title>{buttonText + ' ' + 'Student'}</Modal.Title>
+          <Modal.Title>{buttonText + ' ' + 'Restaurant'}</Modal.Title>
         </Modal.Header>
-        <Modal.Body><StudentForm student={student} handleCrud={crudFunction} /></Modal.Body>
+        <Modal.Body><ReviewForm review={review} handleCrud={crudFunction} /></Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>Close</Button>
         </Modal.Footer>

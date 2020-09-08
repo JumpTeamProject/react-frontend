@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import FormModal from './FormModal';
 import './Card.css';
 
+import { Link } from 'react-router-dom';
+import RestaurantProfile from '../thien_profile/RestaurantProfile';
+
 class Card extends Component {
 
     render() {
@@ -42,6 +45,7 @@ function Footer(props) {
         <div className="card-footer btn-group">
             <button className="btn btn-danger" onClick={props.handleDelete.bind(this, props.studentID)}>DELETE</button>
             <FormModal type='update' student={props.student} handleUpdate={props.handleUpdate} />
+            <Link to={`/profile/${RestaurantProfile}`} className='btn btn-success'>More Info</Link>
         </div>
     );
 }
