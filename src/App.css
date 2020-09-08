@@ -3,8 +3,19 @@
 }
 
 .nav {
-  background-color: #125061;
+    background-color: rgba(10, 61, 75, 0.9);
 }
+
+.btn-color {
+    background-color: rgb(255, 63, 5, 0.6);
+    color: white;
+}
+
+    .btn-color:hover {
+        background-color: rgb(255, 63, 5);
+        color: white;
+    }
+
 
 .title {
   color: chartreuse;

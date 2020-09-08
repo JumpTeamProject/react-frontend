@@ -23,8 +23,8 @@ const Card = props => {
             {/*</div>*/}
             {/*<RestaurantDescriptionAndLocation name={props.title} description={props.description}/>*/}
             <form>
-                <div class="form-group form-style">
-                    <label for="review">Your reviews here</label>
+                <div className="form-group form-style">
+                    <label htmlFor="review">Your reviews here</label>
                     <textarea value={props.value} onChange={props.handleChange} name="review" rows="10" className='form-control' placeholder="your reviews" />
                     <input type="submit" value="Submit" />
                 </div>

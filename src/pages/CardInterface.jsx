@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { deleteStudent, updateStudent } from '../service/StudentService';
 import CardLayout from "./CardLayout";
 
 // Card Interface Contains All Card Rendering, Grouping, Functions, and Modals
 function CardInterface(props) {
+    const [filterValue, setFilterValue] = useState(localStorage.getItem("currentUser") || []);
+    console.log(filterValue);
 
   // Delete Student Card
   const handleDelete = (id) => {
@@ -24,7 +26,7 @@ function CardInterface(props) {
   // Render the Cards and the Modals
   return (
     <div>
-      <CardLayout handleUpdate={handleUpdate} handleDelete={handleDelete} />
+          {/*<CardLayout handleUpdate={handleUpdate} handleDelete={handleDelete} />*/}
     </div>
   );
 }

@@ -1,62 +1,75 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import './Login.css';
-import {validateUser} from '../service/StudentService';
+import { validateUser } from '../service/StudentService';
 
-//Will be updated to use Hooks
-class Login extends Component {
+const useStateWithLocalStorage = localStorageKey => {
+    const [value, setValue] = React.useState(
+        localStorage.getItem(localStorageKey) || []
+    );
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            email: '',
-            password: ''
-        };
+    React.useEffect(() => {
+        localStorage.setItem(localStorageKey, value);
+    }, [value]);
+
+    return [value, setValue];
+};
+
+const Login = (props) => {
+    const [data, setData] = useStateWithLocalStorage("currentUser");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    const handleChange = event => {
+        switch (event.target.name) {
+            case "email": setEmail(event.target.value);
+                break;
+            case "password": setPassword(event.target.value);
+                break;
+        }        
     }
 
-    handleChange(event) {
-        let name = event.target.name;
-        let value = event.target.value;
+    const handleSubmit = event => {
+        //event.preventDefault();
 
-        this.setState({ [name]: value });
-    }
-
-    handleSubmit(event) {
-        console.log(validateUser(this.state.email, this.state.password));
-        
-        if (validateUser(this.state.email, this.state.password) !== null) {
-            alert('Login Successful!!');
-            event.preventDefault();
+        try {
+            const response = validateUser(email, password);
+            if (response.status === 200) {
+                setData(response.data);
+                console.log('Date fetched! -> ' + response.data);
+                alert('Login Successful!!');
+            }
+        } catch (error) {
+            alert('Login Unsuccessful!!');
+            throw error;
         }
     }
 
-    render() {
-        return (
-            <div className="container fadeInDown">
-		        <div className="d-flex justify-content-center">
-			        <div className="user_card">
-				        <div className="d-flex justify-content-center">
-					        <div className="brand_logo_container">
-						        <img src="https://icon-library.com/images/health-food-icon/health-food-icon-17.jpg" className="brand_logo" alt="Logo"/>
-					        </div>
-				        </div>
-				        <div className="d-flex justify-content-center form_container">
-					        <form onSubmit={this.handleSubmit.bind(this)}>
-						        <div className="input-group mb-3">
-                                    <input type="text" name="email" className="form-control input_user" value={this.state.email} placeholder="username" onChange={this.handleChange.bind(this)}/>
-						        </div>
-						        <div className="input-group mb-2">
-							        <input type="password" name="password" className="form-control input_pass" value={this.state.password} placeholder="password" onChange={this.handleChange.bind(this)}/>
-						        </div>
-							    <div className="d-flex justify-content-center mt-3 login_container">
-				 	                <button type="submit" name="submit" className="btn login_btn">Login</button>
-				                </div>
-                            </form>
+    return (
+        <div className="container fadeInDown">
+            <div className="d-flex justify-content-center">
+                <div className="user_card">
+                    <div className="d-flex justify-content-center">
+                        <div className="brand_logo_container">
+                            <img src="https://icon-library.com/images/health-food-icon/health-food-icon-17.jpg" className="brand_logo" alt="Logo" />
                         </div>
-				    </div>
+                    </div>
+                    <div className="d-flex justify-content-center form_container">
+                        <form onSubmit={handleSubmit}>
+                            <div className="input-group mb-3">
+                                <input type="text" name="email" className="form-control input_user" value={email} placeholder="username" onChange={handleChange} />
+                            </div>
+                            <div className="input-group mb-2">
+                                <input type="password" name="password" className="form-control input_pass" value={password} placeholder="password" onChange={handleChange} />
+                            </div>
+                            <div className="d-flex justify-content-center mt-3 login_container">
+                                <button type="submit" name="submit" className="btn login_btn">Login</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        );
-    }
+        </div>
+    );
 }
 
 export default Login;

@@ -7,14 +7,11 @@ export const useFetch = (searchMethod, searchValue) => {
 
   if (searchValue !== undefined) param = searchValue;
 
-  const getAll = 'http://localhost:8080/api/allUsers';
   const getById = 'http://localhost:8080/api/users/' + param;
   let url = null;
 
   switch (searchMethod) {
     case 'getById': url = getById;
-      break;
-    case 'getAll': url = getAll;
       break;
     default: url = null;
   }
