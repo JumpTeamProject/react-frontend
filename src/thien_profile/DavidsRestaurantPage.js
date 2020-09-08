@@ -15,22 +15,67 @@ const Card = props => {
                 <hr />
                 <h4>Location:</h4>
                 <p>1234 Mcdonalds Ave</p>
-
-                {/* <a href="#" className="btn btn-outline-success">Click Here</a> */}
             </div>
         </div>
     );
 }
 
 class RestaurantProfile extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            value: 'review',
+        };
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange(event) {
+        // this.setState({ color: event.target.value });
+
+        let name = event.target.value;
+        let value = event.target.value;
+
+        this.setState({ [name]: value });
+    }
+
+    handleSubmit(event) {
+        alert(
+            'Reviews and Feedback: ' + this.state.value
+        );
+
+        // do your call maybe to post this information or update something with an api
+
+        this.setState({
+            value: 'review',
+        });
+
+        event.preventDefault();
+    }
+
     render() {
         return (
-            <div className="container-fluid d-flex justify-content-center">
-                <div className="column">
-                    <div className="col-md-4">
-                        <Card imgsrc={img1} title="Mcdonalds" />
+            <div>
+
+                <div className="container-fluid d-flex justify-content-center">
+                    <div className="column">
+                        <div className="col-md-4">
+                            <Card imgsrc={img1} title="Mcdonalds" />
+                        </div>
                     </div>
                 </div>
+
+                <form>
+                    <div class="form-group form-style">
+                        <label for="review">Your reviews here</label>
+                        <textarea value={this.state.review} onChange={this.handleChange} name="review" rows="10" className='form-control' placeholder="your reviews" />
+                        <input type="submit" value="Submit" />
+                    </div>
+
+                </form>
+
             </div>
         );
     }
