@@ -46,7 +46,7 @@ class CardForm extends Component {
                         </div>
 
                         <div className="form-group">
-                            <label >Description:</label>
+                            <label>Description:</label>
                             <input type="text" name="description" className="form-control" id="description" value={this.state.description} onChange={this.handleChange} required />
                         </div>
 
@@ -56,7 +56,7 @@ class CardForm extends Component {
                         </div>
 
                         <div className="form-group">
-                            <label >Owner:</label>
+                            <label>Owner:</label>
                             <input type="text" name="owner" className="form-control" id="owner" value={this.state.owner} onChange={this.handleChange} required />
                         </div>
 

@@ -24,13 +24,15 @@ class Card extends Component {
                 <div className="col-lg-3 overflow">
                     <img src={this.props.info.imageUrl} alt='FoodImage' className="card-img"/>
                 </div>
-                 <div className="col-lg-8 card-body text-dark">
+                 <div className="col-lg-7 card-body text-dark">
                     <h4 className="card-title">{this.props.info.name}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{this.props.info.rating}</h4>
                     <p className="card-text text-secondary">{this.props.info.description}</p>
                 </div>
                 {/* Button for ADMIN ONLY: */}
                 <div className="col-lg-2"> 
-                    <DeleteButton restaurantID = {this.props.info.id} handleDelete={this.props.handleDelete } />
+                <br/>
+                <button className="btn btn-outline-success">delete</button>
+                    {/* <DeleteButton cardID = {'card' + this.props.info.id} restaurantID = {this.props.info.id} handleDelete={this.props.handleDelete } /> */}
                 </div>
             </div>
             </div>
