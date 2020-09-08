@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import '../../App.css';
 import logo from '../../images/cutout_logo.png';
+import SearchForm from "./SearchForm";
 
 //import { Link } from 'react-router-dom';
 
@@ -48,10 +49,7 @@ class MyNavBar extends Component {
               </li> */}
             </ul>
 
-            <form className="form-inline my-2 my-lg-0">
-              <input className="form-control mr-sm-2" type="text" placeholder="Search" />
-              <button className="btn btn-color my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            <SearchForm/>
           </div>
         </nav>
       </div>
