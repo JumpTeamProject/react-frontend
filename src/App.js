@@ -1,9 +1,9 @@
 
 import React, { Component } from 'react';
-/*import HomePage from './pages/HomePage';
-import Login from './darreal_login/Login';
-import RestaurantProfile from './thien_profile/RestaurantProfile';*/
-
+import { Switch, Route } from "react-router-dom";
+import Login from "./components/pages/login/Login";
+import HomePage from './components/pages/homepage/HomePage';
+import RestaurantProfile from './components/pages/restaurant_profile/RestaurantProfile';
 import MyNavBar from "./components/navbar/MyNavBar"
 import PageContent from "./components/pages/PageContent"
 import './App.css';
@@ -33,12 +33,18 @@ class App extends Component {
       //<Router>
         <div className="App">
           <MyNavBar changePage={this.changePage} />
-          <PageContent page={webpage} />
+            {/*<PageContent page={webpage} />*/}
           {/* <Switch>
             <Route exact path='/' component={HomePage} />
             <Route exact path='/login' component={Login} />
             <Route exact path='/profile' component={RestaurantProfile} />
           </Switch> */}
+            <Switch>
+                {/*<Route path="/" component={HomePage} exact />*/}
+                <Route path="/home" component={HomePage} />
+                <Route path="/login" component={Login} />
+                <Route path="/profile" component={RestaurantProfile} />
+            </Switch>
         </div>
       //</Router>
     );
