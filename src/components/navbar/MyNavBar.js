@@ -3,7 +3,7 @@ import '../../App.css';
 import logo from '../../images/cutout_logo.png';
 import SearchForm from "./SearchForm";
 
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class MyNavBar extends Component {
 
@@ -14,35 +14,32 @@ class MyNavBar extends Component {
   }
 
     handleNavClick(event, newPage) {
-        this.props.changePage(newPage);
-        if (newPage === 'home') {
-            this.setState({ showSearch: true });
-        } else {
-            this.setState({ showSearch: false });
-        }
+        this.setState({ showSearch: newPage });
     // prevent reload of page caused by clicking links
-    event.preventDefault();
+    //event.preventDefault();
   }
 
-  render() {
+    render() {
+        const cardClicked = localStorage.getItem("showSearch");
+
     return (
       <div>
         <nav className="navbar navbar-expand-lg nav fadeIn second">
-          <a href="#"> <img src={logo} style={{ width: 65, marginTop: -7 }} className="navbar-brand title" onClick={(event) => this.handleNavClick(event, 'home')} /></a>
+                <Link to="/home"> <img src={logo} style={{ width: 65, marginTop: -7 }} className="navbar-brand title" onClick={(event) => this.handleNavClick(event, true)} /></Link>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <a href="#" className="nav-link" onClick={(event) => this.handleNavClick(event, 'home')}>Home <span className="sr-only">(current)</span></a>
+                            <Link to="/home" className="nav-link" onClick={(event) => this.handleNavClick(event, true)}>Home <span className="sr-only">(current)</span></Link>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link" onClick={(event) => this.handleNavClick(event, 'login')}>Login</a>
+                            <Link to="/login" className="nav-link" onClick={(event) => this.handleNavClick(event, false)}>Login</Link>
               </li>
-              <li className="nav-item">
-                <a href="#" className="nav-link" onClick={(event) => this.handleNavClick(event, 'restaurant')}>Restaurant</a>
-              </li>
+              {/*<li className="nav-item">
+                <a href="profile" className="nav-link" onClick={(event) => this.handleNavClick(event, 'restaurant')}>Restaurant</a>
+              </li>*/}
 
               {/* <li>
                 <Link to='/'>Home</Link>
@@ -57,7 +54,7 @@ class MyNavBar extends Component {
 
                     {this.state.showSearch && < SearchForm />}
           </div>
-        </nav>
+            </nav>
       </div>
     );
   }

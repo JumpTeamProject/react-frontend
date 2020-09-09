@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import FormModal from '../forms/FormModal';
 import './Card.css';
-import CardClick from './CardClick'
+import CardClick from './CardClick';
+import { Link } from 'react-router-dom';
 
-// function handleClick() {
-//     console.log("I was clicked")
-// }
+
+function handleClick(event, newPage) {
+    console.log("I was clicked");
+    localStorage.setItem( "showSearch", false );
+}
 
 // function CardClick() {
 //     return (
@@ -15,11 +18,13 @@ import CardClick from './CardClick'
 
 // const Card = props =>{
 class Card extends Component {
+
     render() {
-    return(
+        return (
+            <Link to="/profile" >
         <div className="container-fluid d-flex justify-content-center">
-            {/* onClick={handleClick} */}
-            <div className="card card-block text-center shadow" id={'card' + this.props.info.id}> 
+            
+                    <div className="card card-block text-center shadow" id={'card' + this.props.info.id} onClick={handleClick}> 
             <div className="row">
                 <div className="col-lg-3 overflow">
                     <img src={this.props.info.imageUrl} alt='FoodImage' className="card-img"/>
@@ -36,7 +41,7 @@ class Card extends Component {
                 </div>
             </div>
             </div>
-        </div>
+                </div></Link>
     );
     }
 }
