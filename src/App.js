@@ -1,10 +1,10 @@
 
 import React, { Component } from 'react';
 import { Switch, Route } from "react-router-dom";
-import Login from "./components/pages/login/Login";
-import HomePage from './components/pages/homepage/HomePage';
+import Login from "./login/Login";
+import HomePage from './home/HomePage';
 import RestaurantProfile from './components/pages/restaurant_profile/RestaurantProfile';
-import MyNavBar from "./components/navbar/MyNavBar";
+import MyNavBar from "./navbar/MyNavBar";
 import './App.css';
 
 //import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
