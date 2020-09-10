@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Switch, Route } from "react-router-dom";
 import Login from "./login/Login";
 import HomePage from './home/HomePage';
-import RestaurantProfile from './components/pages/restaurant_profile/RestaurantProfile';
+import RestaurantProfile from './restaurant_profile/RestaurantProfile';
 import MyNavBar from "./navbar/MyNavBar";
 import './App.css';
 
