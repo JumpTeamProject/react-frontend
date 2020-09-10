@@ -1,5 +1,5 @@
 import React from "react";
-import { deleteReview, updateReview } from '../../../../service/ReviewService';
+import { deleteReview, updateReview } from '../../../service/ReviewService';
 import CardLayout from "./CardLayout";
 
 // Card Interface Contains All Card Rendering, Grouping, Functions, and Modals
@@ -24,7 +24,7 @@ function CardInterface(props) {
   // Render the Cards and the Modals
   return (
       <div className="container-fluid d-flex justify-content-center">
-      <CardLayout handleUpdate={handleUpdate} handleDelete={handleDelete} />
+          <CardLayout id={props.id} handleUpdate={handleUpdate} handleDelete={handleDelete} />
     </div>
   );
 }

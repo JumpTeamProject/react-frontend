@@ -10,9 +10,9 @@
     background: radial-gradient(#e5e5e5, #ffff, #e5e5e5);
 } */
 
-.card {
+/*.card {*/
     /* width: 20rem; */
-    width: 80%;
+    /*width: 80%;
 }
 
 .card:hover {
@@ -37,15 +37,10 @@
     overflow: hidden;
 }
 
-.card-img {
-    transform: scale(1);
-    transition: transform 0.5s ease;
-}
-
 .card-img:hover {
     transform: scale(1.8);
 }
 
 .card-footer {
     
-}
+}*/

@@ -28,9 +28,10 @@
     overflow: visible;
 }
 
-/* img {
-    height: 12rem;
-} */
+#profileimg {
+    height: 200px;
+    width: 200px;
+} 
 
 .SplitPane {
     width: 100%;
