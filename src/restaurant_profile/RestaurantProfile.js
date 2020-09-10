@@ -42,6 +42,7 @@ function SplitPane(props) {
 
 const RestaurantProfile = props => {
     const location = useLocation();
+    console.log(location);
     const id = location.search.substring(1, location.search.length);
     const { loading, data } = useFetch('getById', id);
     console.log(id);
