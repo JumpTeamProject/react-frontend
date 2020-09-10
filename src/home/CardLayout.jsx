@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Card from './CardUI';
-import { useFetch } from '../../../../service/RestaurantService';
+import { useFetch } from '../service/RestaurantService';
 
 function CardLayout(props) {
   const { loading, data } = useFetch('getAll', null);

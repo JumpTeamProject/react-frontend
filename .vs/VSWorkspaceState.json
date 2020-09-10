@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src"
+    "\\src",
+    "\\src\\components",
+    "\\src\\components\\pages",
+    "\\src\\components\\pages\\homepage",
+    "\\src\\components\\pages\\homepage\\cards"
   ],
+  "SelectedNode": "\\src\\components\\pages\\homepage\\cards\\CardUI.js",
   "PreviewInSolutionExplorer": false
 }
