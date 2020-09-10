@@ -5,10 +5,9 @@ import CardClick from './CardClick';
 import { Link } from 'react-router-dom';
 
 
-function handleClick(event, newPage) {
+/*function handleClick() {
     console.log("I was clicked");
-    localStorage.setItem( "showSearch", false );
-}
+}*/
 
 // function CardClick() {
 //     return (
@@ -24,7 +23,7 @@ class Card extends Component {
             <Link to="/profile" >
         <div className="container-fluid d-flex justify-content-center">
             
-                    <div className="card card-block text-center shadow" id={'card' + this.props.info.id} onClick={handleClick}> 
+                    <div className="card card-block text-center shadow" id={'card' + this.props.info.id} > 
             <div className="row">
                 <div className="col-lg-3 overflow">
                     <img src={this.props.info.imageUrl} alt='FoodImage' className="card-img"/>
