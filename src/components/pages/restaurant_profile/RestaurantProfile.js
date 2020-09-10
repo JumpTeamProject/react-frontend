@@ -76,6 +76,7 @@ class RestaurantProfile extends Component {
     }
 
     render() {
+       
         const review = {
             id: 1
         };

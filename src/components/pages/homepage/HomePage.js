@@ -4,6 +4,7 @@ import FormModal from './forms/FormModal';
 
 class HomePage extends Component {
     render() {
+       
         return (
             <div>
                 <FormModal type = "create" />
