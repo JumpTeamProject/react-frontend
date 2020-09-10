@@ -52,7 +52,7 @@
 .SplitPane-right {
     float: left;
     order: 2;
-    align-self: flex-end;
+    align-self: flex-start;
     padding-left: 6rem;
     width: 80%;
 }

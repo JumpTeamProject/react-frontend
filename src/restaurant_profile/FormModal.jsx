@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import './form.css';
 import ReviewForm from './ReviewForm';
-import { createReview } from '../../../service/ReviewService';
+import { createReview } from '../service/ReviewService';
 
 const FormModal = (props) => {
   const [show, setShow] = useState(false);

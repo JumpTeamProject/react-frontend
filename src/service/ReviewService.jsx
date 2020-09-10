@@ -31,7 +31,7 @@ export const useFetch = (searchMethod, searchValue) => {
                     console.log('Date fetched! -> ' + response.data);
                 }
             } catch (error) {
-                throw error;
+                setData(null);
             } finally {
                 setLoading(false);
             }

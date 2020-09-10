@@ -6,7 +6,7 @@ import FormModal from './FormModal';
 import RestaurantImage from "./RestaurantImage";
 import RestaurantDetails from "./RestaurantDetails";
 import CardInterface from "./CardInterface";
-import { useFetch } from '../../../service/RestaurantService';
+import { useFetch } from '../service/RestaurantService';
 
 function ReviewList(props) {
     return (
@@ -42,6 +42,7 @@ function SplitPane(props) {
 
 const RestaurantProfile = props => {
     const location = useLocation();
+    console.log(location);
     const id = location.search.substring(1, location.search.length);
     const { loading, data } = useFetch('getById', id);
     console.log(id);
