@@ -4,7 +4,7 @@ import { validateUser } from '../service/UserService';
 import useStateWithLocalStorage from '.././useStateWithLocalStorage';
 
 const Login = (props) => {
-    const [data, setData] = useStateWithLocalStorage("currentUser");
+    const [data, setData] = useStateWithLocalStorage("currentUser", "{id: -1}");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 

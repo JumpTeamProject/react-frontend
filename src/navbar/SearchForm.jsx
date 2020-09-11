@@ -3,7 +3,7 @@ import { Form, FormControl, Button } from 'react-bootstrap';
 import useStateWithLocalStorage from '.././useStateWithLocalStorage';
 
 const SearchForm = (props) => {
-    const [searchTerm, setSearchTerm] = useStateWithLocalStorage("filterName");
+    const [searchTerm, setSearchTerm] = useStateWithLocalStorage("filterName", '');
 
     const handleChange = event => setSearchTerm(event.target.value);
     //const handleClick = event => window.location.reload(false);
