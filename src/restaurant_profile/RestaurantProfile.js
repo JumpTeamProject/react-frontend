@@ -6,7 +6,8 @@ import FormModal from './FormModal';
 import RestaurantImage from "./RestaurantImage";
 import RestaurantDetails from "./RestaurantDetails";
 import CardInterface from "./CardInterface";
-import { useFetch } from '../../../service/RestaurantService';
+
+import {useFetch} from "../service/RestaurantService";
 
 function ReviewList(props) {
     return (
