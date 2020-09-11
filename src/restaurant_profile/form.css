@@ -1,0 +1,10 @@
+.form-style {
+    width: 50%;
+    margin: 30px auto;
+    color: red;
+}
+
+#review {
+    position: center;
+    cursor: pointer;
+}

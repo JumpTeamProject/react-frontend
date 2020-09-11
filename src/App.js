@@ -1,37 +1,36 @@
 
 import React, { Component } from 'react';
-import HomePage from './pages/HomePage';
-import Login from './darreal_login/Login';
-import Restaurant from './thien_profile/RestaurantProfile';
-
-import MyNavBar from "./caroline_home/MyNavBar"
-import PageContent from "./caroline_home/PageContent"
+import { Switch, Route } from "react-router-dom";
+import Login from "./login/Login";
+import HomePage from './home/HomePage';
+import RestaurantProfile from './restaurant_profile/RestaurantProfile';
+import MyNavBar from "./navbar/MyNavBar";
 import './App.css';
 
+//import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 class App extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      page: 'home'
-    };
-    // bind so you know you are calling the function that is in here.
-    this.changePage = this.changePage.bind(this);
-  }
-
-  changePage(newPage) {
-    this.setState({
-      page: newPage
-    });
-  }
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {data: {}};
+    //
+    // }
+    //
+    // addDate(newUser) {
+    //     this.setState({data: newUser});
+    // }
 
   render() {
-    const webpage = this.state.page;
     return (
-      <div className="App">
-        <MyNavBar changePage={this.changePage} />
-        <PageContent page={webpage} />
-      </div>
+        <div className="App">
+          <MyNavBar />
+            <Switch>
+                <Route path="/" component={HomePage} exact />
+                <Route path="/home" component={HomePage} />
+                <Route path="/login" component={Login} />
+                <Route path="/profile" component={RestaurantProfile} />
+            </Switch>
+        </div>
     );
   }
 }
