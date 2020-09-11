@@ -48,7 +48,21 @@ export function validateUser(email, password) {
 
 export function updateUser() {
   console.log('in the upate service');
-  return axios.put('http://localhost:8080/api/update/user');
+  return axios.put('http://localhost:8080/api/update/user', {
+    auth: {
+      username: "some",
+      password: "123"
+    },
+    body: {
+      "id": 12,
+      "email": "davmor@ucdavis.edu",
+      "password": "1234",
+      "firstName": "Nino",
+      "lastName": "Morales",
+      "addressId": 5,
+      "userRole": "ROLE_ADMIN"
+    }
+  });
 }
 
 export function deleteUser(userId) {

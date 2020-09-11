@@ -7,14 +7,16 @@ export const useFetch = (searchMethod, searchValue) => {
 
   if (searchValue !== undefined) param = searchValue;
 
+<<<<<<< HEAD:src/service/UserService.jsx
+  const getById = 'http://localhost:8080/api/users/' + param;
+=======
   const getAll = 'http://localhost:8080/api/restaurants';
   const getById = 'http://localhost:8080/api/restaurant/' + param;
+>>>>>>> David:src/service/RestaurantService.jsx
   let url = null;
 
   switch (searchMethod) {
     case 'getById': url = getById;
-      break;
-    case 'getAll': url = getAll;
       break;
     default: url = null;
   }
@@ -41,6 +43,23 @@ export const useFetch = (searchMethod, searchValue) => {
   return { loading, data };
 };
 
+<<<<<<< HEAD:src/service/UserService.jsx
+export function createUser(user) {
+  return axios.post('http://localhost:8080/api/add/user', user);
+}
+
+export function validateUser(email, password) {
+  return axios.get('http://localhost:8080/api/users/login/username/' + email + '/password/' + password);
+}
+
+export function updateUser() {
+  console.log('in the upate service');
+  return axios.put('http://localhost:8080/api/update/user');
+}
+
+export function deleteUser(userId) {
+  return axios.delete('http://localhost:8080/api/delete/user/' + userId);
+=======
 export function createRestaurant(restaurant) {
   return axios.post('http://localhost:8080/api/add/restaurant', restaurant);
 }
@@ -52,6 +71,7 @@ export function createRestaurant(restaurant) {
 
 export function deleteRestaurant(restaurantId) {
   return axios.delete('http://localhost:8080/api/delete/restaurant/' + restaurantId);
+>>>>>>> David:src/service/RestaurantService.jsx
 }
 
 
