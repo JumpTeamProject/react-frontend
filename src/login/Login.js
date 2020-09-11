@@ -4,7 +4,7 @@ import { validateUser } from '../service/UserService';
 import useStateWithLocalStorage from '.././useStateWithLocalStorage';
 
 const Login = (props) => {
-    const [data, setData] = useStateWithLocalStorage("currentUser", "{id: -1}");
+    const [data, setData] = useStateWithLocalStorage("currentUser", JSON.stringify({}));
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -30,7 +30,7 @@ const Login = (props) => {
             });
         } catch (error) {
             alert('Login Unsuccessful!!');
-            throw error;
+            localStorage.setItem("currentUser", JSON.stringify({}));
             props.history.push('/home');
         }
     }

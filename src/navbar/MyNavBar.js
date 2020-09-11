@@ -17,11 +17,11 @@ const MyNavBar = props => {
     }, [location]);
 
     React.useEffect(() => {
-        setShowLogin(localStorage.getItem("currentUser") === null || localStorage.getItem("currentUser") === "{id: -1}" || localStorage.getItem("currentUser") === {});
+        setShowLogin(localStorage.getItem("currentUser") === null || localStorage.getItem("currentUser") === JSON.stringify({}) || localStorage.getItem("currentUser") === {});
     }, [localStorage.getItem("currentUser")]);
 
     React.useEffect(() => {
-        setShowLogout(localStorage.getItem("currentUser") !== null && localStorage.getItem("currentUser") !== "{id: -1}" && localStorage.getItem("currentUser") !== {});
+        setShowLogout(localStorage.getItem("currentUser") !== null && localStorage.getItem("currentUser") !== JSON.stringify({}) && localStorage.getItem("currentUser") !== {});
     }, [localStorage.getItem("currentUser")]);
 
     return (
