@@ -1,18 +1,7 @@
 import React, { useState } from 'react';
 import './Login.css';
 import { validateUser } from '../service/UserService';
-
-const useStateWithLocalStorage = localStorageKey => {
-    const [value, setValue] = React.useState(
-        localStorage.getItem(localStorageKey) || {}
-    );
-
-    React.useEffect(() => {
-        localStorage.setItem(localStorageKey, value);
-    }, [value]);
-
-    return [value, setValue];
-};
+import useStateWithLocalStorage from '.././useStateWithLocalStorage';
 
 const Login = (props) => {
     const [data, setData] = useStateWithLocalStorage("currentUser");
@@ -58,10 +47,10 @@ const Login = (props) => {
                     <div className="d-flex justify-content-center form_container">
                         <form onSubmit={handleSubmit}>
                             <div className="input-group mb-3">
-                                <input type="text" name="email" className="form-control input_user" value={email} placeholder="username" onChange={handleChange} />
+                                <input type="text" name="email" className="form-control input_user" value={email} placeholder="username" onChange={handleChange} required />
                             </div>
                             <div className="input-group mb-2">
-                                <input type="password" name="password" className="form-control input_pass" value={password} placeholder="password" onChange={handleChange} />
+                                <input type="password" name="password" className="form-control input_pass" value={password} placeholder="password" onChange={handleChange} required />
                             </div>
                             <div className="d-flex justify-content-center mt-3 login_container">
                                 <button type="submit" name="submit" className="btn login_btn">Login</button>

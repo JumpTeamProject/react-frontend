@@ -9,13 +9,14 @@ export const useFetch = (searchMethod, searchValue) => {
 
   const getAll = 'http://localhost:8080/api/restaurants';
   const getById = 'http://localhost:8080/api/restaurant/' + param;
+
   let url = null;
 
   switch (searchMethod) {
     case 'getById': url = getById;
-      break;
-    case 'getAll': url = getAll;
-      break;
+          break;
+      case 'getAll': url = getAll;
+          break;
     default: url = null;
   }
 
@@ -52,6 +53,7 @@ export function createRestaurant(restaurant) {
 
 export function deleteRestaurant(restaurantId) {
   return axios.delete('http://localhost:8080/api/delete/restaurant/' + restaurantId);
+
 }
 
 
