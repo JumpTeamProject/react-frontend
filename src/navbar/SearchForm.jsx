@@ -1,16 +1,9 @@
 import React from "react";
 import { Form, FormControl, Button } from 'react-bootstrap';
-
-const useStateWithLocalStorage = localStorageKey => {
-    const [value, setValue] = React.useState(localStorage.getItem(localStorageKey) || '');
-
-    React.useEffect(() => {localStorage.setItem(localStorageKey, value);}, [value]);
-
-    return [value, setValue];
-};
+import useStateWithLocalStorage from '.././useStateWithLocalStorage';
 
 const SearchForm = (props) => {
-    const [searchTerm, setSearchTerm] = useStateWithLocalStorage("filterName");
+    const [searchTerm, setSearchTerm] = useStateWithLocalStorage("filterName", '');
 
     const handleChange = event => setSearchTerm(event.target.value);
     //const handleClick = event => window.location.reload(false);

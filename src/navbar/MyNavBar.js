@@ -4,14 +4,25 @@ import logo from '../images/cutout_logo.png';
 import SearchForm from "./SearchForm";
 import { Link, useLocation } from 'react-router-dom';
 import { useState } from "react";
+import { Logout } from "./Logout";
 
 const MyNavBar = props => {
     const location = useLocation();
     const [showSearch, setShowSearch] = useState(true);
+    const [showLogin, setShowLogin] = useState(true);
+    const [showLogout, setShowLogout] = useState(false);
 
     React.useEffect(() => {
         setShowSearch(location.pathname === "/home" || location.pathname === "/");
-        }, [location]);
+    }, [location]);
+
+    React.useEffect(() => {
+        setShowLogin(localStorage.getItem("currentUser") === null || localStorage.getItem("currentUser") === JSON.stringify({}) || localStorage.getItem("currentUser") === {});
+    }, [localStorage.getItem("currentUser")]);
+
+    React.useEffect(() => {
+        setShowLogout(localStorage.getItem("currentUser") !== null && localStorage.getItem("currentUser") !== JSON.stringify({}) && localStorage.getItem("currentUser") !== {});
+    }, [localStorage.getItem("currentUser")]);
 
     return (
       <div>
@@ -24,11 +35,10 @@ const MyNavBar = props => {
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
                             <Link to="/home" className="nav-link" >Home <span className="sr-only">(current)</span></Link>
-              </li>
-              <li className="nav-item">
-                            <Link to="/login" className="nav-link" >Login</Link>
-              </li>
-           </ul>
+                        </li>
+                        {showLogin && < li className="nav-item"><Link to="/login" className="nav-link" >Login</Link></li>}
+                        {showLogout && < Logout />}
+            </ul>
                     {showSearch && < SearchForm />}
           </div>
             </nav>
